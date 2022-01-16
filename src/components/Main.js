@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import { useState } from "react";
 
 function Main(props) {
+  const [tracks, setTracks] = useState([]);
   return (
     <div className="main-component">
       <Switch>
