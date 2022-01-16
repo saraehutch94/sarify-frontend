@@ -25,8 +25,8 @@ function Main(props) {
         <Route exact path="/sarify/home">
           <Home />
         </Route>
-        <Route path="/sarify/tracks" tracks={tracks}>
-          <Tracks />
+        <Route path="/sarify/tracks">
+          <Tracks tracks={tracks} />
         </Route>
         <Route path="/sarify/track/:id" render={(rp) => <Track {...rp} />} />
       </Switch>
