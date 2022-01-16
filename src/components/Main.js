@@ -8,6 +8,12 @@ function Main(props) {
   const [tracks, setTracks] = useState([]);
 
   const URL = "https://sarify-backend.herokuapp.com/sarify/tracks";
+
+  const getTracks = async () => {
+    const data = await fetch(URL);
+    console.log(data);
+  };
+
   return (
     <div className="main-component">
       <Switch>
