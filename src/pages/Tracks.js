@@ -15,7 +15,7 @@ function Tracks(props) {
 
   return (
     <div className="tracks-component">
-      <h1>Tracks Component</h1>
+      {props.tracks ? loaded() : loading()}
     </div>
   );
 }
