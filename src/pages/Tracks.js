@@ -9,6 +9,10 @@ function Tracks(props) {
     ));
   };
 
+  const loading = () => {
+    return <h1>Loading...</h1>;
+  };
+
   return (
     <div className="tracks-component">
       <h1>Tracks Component</h1>
