@@ -28,9 +28,10 @@ function Main(props) {
         <Route path="/sarify/tracks">
           <Tracks />
         </Route>
-        <Route path="/sarify/track/:id">
-          <Track />
-        </Route>
+        <Route
+          path="/sarify/track/:id"
+          render={(rp) => <Track {...rp} tracks={tracks} />}
+        />
       </Switch>
     </div>
   );
