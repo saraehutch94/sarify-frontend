@@ -2,6 +2,7 @@ import Home from "../pages/Home";
 import Tracks from "../pages/Tracks";
 import Track from "../pages/Track";
 import { Route, Switch } from "react-router-dom";
+import { useState } from "react";
 
 function Main(props) {
   return (
