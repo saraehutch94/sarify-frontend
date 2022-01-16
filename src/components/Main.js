@@ -6,6 +6,8 @@ import { useState } from "react";
 
 function Main(props) {
   const [tracks, setTracks] = useState([]);
+
+  const URL = "https://sarify-backend.herokuapp.com/sarify/tracks";
   return (
     <div className="main-component">
       <Switch>
