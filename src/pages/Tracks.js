@@ -19,7 +19,7 @@ function Tracks(props) {
   };
 
   const loading = () => {
-    return <h1>Loading...</h1>;
+    return <h1>Curating...</h1>;
   };
 
   return (
