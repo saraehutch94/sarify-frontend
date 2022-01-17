@@ -28,7 +28,10 @@ function Main(props) {
         <Route exact path="/sarify/tracks">
           <Tracks tracks={tracks} />
         </Route>
-        <Route path="/sarify/tracks/:id" render={(rp) => <Track {...rp} />} />
+        <Route
+          path="/sarify/tracks/:id"
+          render={(rp) => <Track {...rp} tracks={tracks} />}
+        />
       </Switch>
     </div>
   );
