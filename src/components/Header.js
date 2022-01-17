@@ -4,10 +4,18 @@ function Header(props) {
   return (
     <nav>
       <Link to="/sarify/home">
-        <div className="nav-item">Home</div>
+        <img
+          src="https://i.imgur.com/vBc6UJb.png"
+          alt="home-icon"
+          style={{ height: "25px", width: "25px" }}
+        />
       </Link>
       <Link to="/sarify/tracks">
-        <div className="nav-item">Tracks</div>
+        <img
+          src="https://i.imgur.com/72xhKjz.png"
+          alt="tracks-icon"
+          style={{ height: "25px", width: "25px" }}
+        />
       </Link>
     </nav>
   );
