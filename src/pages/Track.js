@@ -14,6 +14,11 @@ function Track(props) {
     });
   };
 
+  const handleSubmit = () => {
+    e.preventDefault();
+    props.updateTrack(trackForm, id);
+  };
+
   return (
     <div className="ind-track">
       <img
@@ -26,7 +31,7 @@ function Track(props) {
       <p>Project: {foundTrack.project}</p>
       <p>Genre: {foundTrack.genre}</p>
       <h2>Update Track:</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           <input
             type="text"
