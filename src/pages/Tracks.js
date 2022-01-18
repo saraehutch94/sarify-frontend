@@ -2,13 +2,20 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Tracks(props) {
-  const [formState, newFormState] = useState({
+  const [formState, setFormState] = useState({
     title: "",
     artist: "",
     coverArt: "",
     project: "",
     genre: "",
   });
+
+  const handleChange = (e) => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const tracks = props.tracks;
 
