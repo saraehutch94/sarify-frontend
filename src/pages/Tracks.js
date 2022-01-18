@@ -1,6 +1,15 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Tracks(props) {
+  const [formState, newFormState] = useState({
+    title: "",
+    artist: "",
+    coverArt: "",
+    project: "",
+    genre: "",
+  });
+
   const tracks = props.tracks;
 
   const loaded = () => {
