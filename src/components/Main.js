@@ -48,14 +48,6 @@ function Main(props) {
     getTracks();
   };
 
-  // show track
-  const showTrack = async (id) => {
-    await fetch(URL + id, {
-      method: "GET",
-    });
-    getTracks();
-  };
-
   useEffect(() => {
     getTracks();
   }, []);
@@ -75,7 +67,7 @@ function Main(props) {
             <Track
               {...rp}
               tracks={tracks}
-              showTrack={showTrack}
+              URL={URL}
               updateTrack={updateTrack}
               deleteTrack={deleteTrack}
             />
