@@ -29,7 +29,7 @@ function Main(props) {
   };
 
   // update track
-  const updateTrack = (track, id) => {
+  const updateTrack = async (track, id) => {
     await fetch(URL + id, {
       method: "PUT",
       headers: {
@@ -55,7 +55,9 @@ function Main(props) {
         </Route>
         <Route
           path="/sarify/tracks/:id"
-          render={(rp) => <Track {...rp} tracks={tracks} />}
+          render={(rp) => (
+            <Track {...rp} tracks={tracks} updateTrack={updateTrack} />
+          )}
         />
       </Switch>
     </div>
