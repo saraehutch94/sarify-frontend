@@ -6,7 +6,12 @@ function Footer(props) {
     >
       <div>2022 Sarify</div>
       <div>
-        <img src="https://i.imgur.com/X20Qz9B.png" alt="github-watermark" />
+        <a
+          href="https://github.com/saraehutch94/sarify-frontend"
+          target="_blank"
+        >
+          <img src="https://i.imgur.com/X20Qz9B.png" alt="github-watermark" />
+        </a>
         <div>Created by Sara Hutchinson</div>
       </div>
     </div>
