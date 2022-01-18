@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 function Main(props) {
   const [tracks, setTracks] = useState([]);
 
-  const URL = "https://sarify-backend.herokuapp.com/sarify/tracks";
+  const URL = "https://sarify-backend.herokuapp.com/sarify/tracks/";
 
   // index/all tracks
   const getTracks = async () => {
@@ -20,6 +20,18 @@ function Main(props) {
   const createTrack = async (track) => {
     await fetch(URL, {
       method: "POST",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(track),
+    });
+    getTracks();
+  };
+
+  // update track
+  const updateTrack = (track, id) => {
+    await fetch(URL + id, {
+      method: "PUT",
       headers: {
         "Content-Type": "Application/json",
       },
