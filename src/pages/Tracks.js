@@ -41,37 +41,53 @@ function Tracks(props) {
   return (
     <div className="tracks-component">
       {props.tracks ? loaded() : loading()}
+      <h2>Add a Track:</h2>
       <form>
-        <input
-          type="text"
-          name="title"
-          value={formState.title}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="artist"
-          value={formState.artist}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="coverArt"
-          value={formState.coverArt}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="project"
-          value={formState.project}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="genre"
-          value={formState.genre}
-          onChange={handleChange}
-        />
+        <label>
+          <input
+            type="text"
+            name="title"
+            value={formState.title}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          <input
+            type="text"
+            name="artist"
+            value={formState.artist}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          <input
+            type="text"
+            name="coverArt"
+            value={formState.coverArt}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          <input
+            type="text"
+            name="project"
+            value={formState.project}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          <input
+            type="text"
+            name="genre"
+            value={formState.genre}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
         <input type="submit" value="Add Track" />
       </form>
     </div>
