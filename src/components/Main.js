@@ -40,6 +40,14 @@ function Main(props) {
     getTracks();
   };
 
+  // delete track
+  const deleteTrack = async (track, id) => {
+    await fetch(URL + id, {
+      method: "DELETE",
+    });
+    getTracks();
+  };
+
   useEffect(() => {
     getTracks();
   }, []);
