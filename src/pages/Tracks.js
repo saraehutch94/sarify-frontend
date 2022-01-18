@@ -10,8 +10,6 @@ function Tracks(props) {
     genre: "",
   });
 
-  console.log(formState);
-
   const handleChange = (e) => {
     setFormState({
       ...formState,
