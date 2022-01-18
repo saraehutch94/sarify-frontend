@@ -39,7 +39,7 @@ function Main(props) {
           <Home />
         </Route>
         <Route exact path="/sarify/tracks">
-          <Tracks tracks={tracks} />
+          <Tracks tracks={tracks} createTrack={createTrack} />
         </Route>
         <Route
           path="/sarify/tracks/:id"
