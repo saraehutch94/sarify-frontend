@@ -34,6 +34,39 @@ function Tracks(props) {
   return (
     <div className="tracks-component">
       {props.tracks ? loaded() : loading()}
+      <form>
+        <input
+          type="text"
+          name="title"
+          value={formState.title}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="artist"
+          value={formState.artist}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="coverArt"
+          value={formState.coverArt}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="project"
+          value={formState.project}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="genre"
+          value={formState.genre}
+          onChange={handleChange}
+        />
+        <input type="submit" value="Add Track" />
+      </form>
     </div>
   );
 }
