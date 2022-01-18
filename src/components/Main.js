@@ -48,6 +48,14 @@ function Main(props) {
     getTracks();
   };
 
+  // show track
+  const showTrack = async (id) => {
+    await fetch(URL + id, {
+      method: "GET",
+    });
+    getTracks();
+  };
+
   useEffect(() => {
     getTracks();
   }, []);
