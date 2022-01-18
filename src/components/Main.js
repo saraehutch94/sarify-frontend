@@ -9,10 +9,23 @@ function Main(props) {
 
   const URL = "https://sarify-backend.herokuapp.com/sarify/tracks";
 
+  // index/all tracks
   const getTracks = async () => {
     const response = await fetch(URL);
     const data = await response.json();
     setTracks(data);
+  };
+
+  // create track
+  const createTrack = async (track) => {
+    await fetch(URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(track),
+    });
+    getTracks();
   };
 
   useEffect(() => {
