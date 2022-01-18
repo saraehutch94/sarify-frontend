@@ -49,6 +49,7 @@ function Tracks(props) {
             name="title"
             value={formState.title}
             onChange={handleChange}
+            placeholder="Title"
           />
         </label>
         <br />
@@ -58,6 +59,7 @@ function Tracks(props) {
             name="artist"
             value={formState.artist}
             onChange={handleChange}
+            placeholder="Artist"
           />
         </label>
         <br />
@@ -67,6 +69,7 @@ function Tracks(props) {
             name="coverArt"
             value={formState.coverArt}
             onChange={handleChange}
+            placeholder="Cover Art"
           />
         </label>
         <br />
@@ -76,6 +79,7 @@ function Tracks(props) {
             name="project"
             value={formState.project}
             onChange={handleChange}
+            placeholder="Project/Album"
           />
         </label>
         <br />
@@ -85,6 +89,7 @@ function Tracks(props) {
             name="genre"
             value={formState.genre}
             onChange={handleChange}
+            placeholder="Genre"
           />
         </label>
         <br />
