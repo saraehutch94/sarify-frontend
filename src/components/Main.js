@@ -75,6 +75,7 @@ function Main(props) {
             <Track
               {...rp}
               tracks={tracks}
+              showTrack={showTrack}
               updateTrack={updateTrack}
               deleteTrack={deleteTrack}
             />
