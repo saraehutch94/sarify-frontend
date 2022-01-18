@@ -41,7 +41,7 @@ function Main(props) {
   };
 
   // delete track
-  const deleteTrack = async (track, id) => {
+  const deleteTrack = async (id) => {
     await fetch(URL + id, {
       method: "DELETE",
     });
@@ -64,7 +64,12 @@ function Main(props) {
         <Route
           path="/sarify/tracks/:id"
           render={(rp) => (
-            <Track {...rp} tracks={tracks} updateTrack={updateTrack} />
+            <Track
+              {...rp}
+              tracks={tracks}
+              updateTrack={updateTrack}
+              deleteTrack={deleteTrack}
+            />
           )}
         />
       </Switch>

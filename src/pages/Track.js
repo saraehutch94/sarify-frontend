@@ -18,6 +18,11 @@ function Track(props) {
     props.updateTrack(trackForm, id);
   };
 
+  const handleDelete = () => {
+    props.deleteTrack(id);
+    props.history.push("/sarify/tracks");
+  };
+
   return (
     <div className="ind-track">
       <img
@@ -29,6 +34,7 @@ function Track(props) {
       <h3>{foundTrack.artist}</h3>
       <p>Project: {foundTrack.project}</p>
       <p>Genre: {foundTrack.genre}</p>
+      <button onClick={handleDelete}>Delete Track</button>
       <h2>Update Track:</h2>
       <form onSubmit={handleSubmit}>
         <label>
