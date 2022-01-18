@@ -17,6 +17,18 @@ function Tracks(props) {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.createTrack(formState);
+    setFormState({
+      title: "",
+      artist: "",
+      coverArt: "",
+      project: "",
+      genre: "",
+    });
+  };
+
   const tracks = props.tracks;
 
   const loaded = () => {
@@ -42,7 +54,7 @@ function Tracks(props) {
     <div className="tracks-component">
       {props.tracks ? loaded() : loading()}
       <h2>Add a Track:</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           <input
             type="text"
