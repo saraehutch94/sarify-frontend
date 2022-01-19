@@ -95,12 +95,15 @@ function Track(props) {
     );
   };
 
-  useEffect(async () => {
-    const response = await fetch(props.URL + id);
-    const data = await response.json();
-    setShowPage(data);
-    setTrackForm(data);
-  }, []);
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(props.URL + id);
+      const data = await response.json();
+      setShowPage(data);
+      setTrackForm(data);
+    }
+    fetchData();
+  }, [props.URL, id]);
 
   return (
     <div className="track">

@@ -9,6 +9,7 @@ function Footer(props) {
         <a
           href="https://github.com/saraehutch94/sarify-frontend"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <img src="https://i.imgur.com/X20Qz9B.png" alt="github-watermark" />
         </a>
