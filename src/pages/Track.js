@@ -95,6 +95,7 @@ function Track(props) {
     );
   };
 
+  // remove later if errors occur on deployment
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(props.URL + id);
