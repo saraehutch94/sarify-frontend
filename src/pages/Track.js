@@ -114,6 +114,7 @@ function Track(props) {
 
   return (
     <div className="ind-track">
+      <h1>Hiiiii new deploy</h1>
       <img
         src={foundTrack.coverArt}
         alt={foundTrack.project}
