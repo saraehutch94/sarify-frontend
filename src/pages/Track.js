@@ -17,7 +17,7 @@ function Track(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.updateTrack(trackForm, id);
-    setShowPage(trackForm);
+    setShowPage(trackForm); // remove later if useEffect API call is not working for page refresh
   };
 
   const handleDelete = () => {
