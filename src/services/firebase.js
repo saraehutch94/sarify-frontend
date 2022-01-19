@@ -27,3 +27,11 @@ const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({
   prompt: "select_account",
 });
+
+// login function
+function login() {
+  return auth.signInWithPopup(provider);
+}
+
+// logout function
+function logout() {}
