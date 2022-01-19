@@ -19,4 +19,11 @@ firebase.initializeApp(firebaseConfig);
 
 // Access auth property
 const auth = firebase.auth();
+
+// Set up Google provider
 const provider = new firebase.auth.GoogleAuthProvider();
+
+// Set custom parameters for provider
+provider.setCustomParameters({
+  prompt: "select_account",
+});
