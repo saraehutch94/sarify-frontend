@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function CreateTrack(props) {
   const [formState, setFormState] = useState({
@@ -13,6 +14,18 @@ function CreateTrack(props) {
     setFormState({
       ...formState,
       [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.createTrack(formState);
+    setFormState({
+      title: "",
+      artist: "",
+      coverArt: "",
+      project: "",
+      genre: "",
     });
   };
 
