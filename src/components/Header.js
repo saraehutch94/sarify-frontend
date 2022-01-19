@@ -18,8 +18,11 @@ function Header(props) {
           style={{ height: "25px", width: "25px" }}
         />
       </Link>
-      <button onClick={login}>Login</button>
-      <button onClick={logout}>Logout</button>
+      {props.user ? (
+        <button onClick={logout}>Logout</button>
+      ) : (
+        <button onClick={login}>Login</button>
+      )}
     </nav>
   );
 }
