@@ -1,6 +1,7 @@
 import Home from "../pages/Home";
 import Tracks from "../pages/Tracks";
 import Track from "../pages/Track";
+import CreateTrack from "../pages/CreateTrack";
 import { Route, Switch } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -73,6 +74,7 @@ function Main(props) {
             />
           )}
         />
+        <Route path="/sarify/create"></Route>
       </Switch>
     </div>
   );
