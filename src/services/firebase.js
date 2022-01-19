@@ -19,3 +19,4 @@ firebase.initializeApp(firebaseConfig);
 
 // Access auth property
 const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
