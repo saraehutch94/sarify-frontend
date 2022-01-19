@@ -74,7 +74,7 @@ function Main(props) {
             />
           )}
         />
-        <Route path="/sarify/create">
+        <Route path="/sarify/create" createTrack={createTrack}>
           <CreateTrack />
         </Route>
       </Switch>
