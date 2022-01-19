@@ -27,6 +27,7 @@ function CreateTrack(props) {
       project: "",
       genre: "",
     });
+    props.history.push("/sarify/tracks");
   };
 
   return (
