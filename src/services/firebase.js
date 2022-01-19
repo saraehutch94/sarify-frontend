@@ -34,4 +34,6 @@ function login() {
 }
 
 // logout function
-function logout() {}
+function logout() {
+  return auth.signOut();
+}
