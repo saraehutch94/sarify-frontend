@@ -37,3 +37,6 @@ function login() {
 function logout() {
   return auth.signOut();
 }
+
+// Export functionality
+export { auth, login, logout };
