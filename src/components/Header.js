@@ -18,6 +18,8 @@ function Header(props) {
           style={{ height: "25px", width: "25px" }}
         />
       </Link>
+      <button onClick={login}>Login</button>
+      <button onClick={logout}>Logout</button>
     </nav>
   );
 }
