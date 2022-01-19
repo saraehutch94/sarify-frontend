@@ -19,7 +19,18 @@ function Header(props) {
         />
       </Link>
       {props.user ? (
-        <button onClick={logout}>Logout</button>
+        <div>
+          <img
+            src={props.user.photoURL}
+            alt={props.user.displayName}
+            style={{
+              height: "3.125rem",
+              width: "3.125rem",
+              borderRadius: "50%",
+            }}
+          />
+          <button onClick={logout}>Logout</button>
+        </div>
       ) : (
         <button onClick={login}>Login</button>
       )}
