@@ -1,4 +1,6 @@
-function CreateTrack() {
+import { useState } from "react";
+
+function CreateTrack(props) {
   return (
     <div className="create-track">
       <h2>Create a Track</h2>
