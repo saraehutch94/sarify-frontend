@@ -9,6 +9,13 @@ function CreateTrack(props) {
     genre: "",
   });
 
+  const handleChange = (e) => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <div className="create-track">
       <h2>Create a Track</h2>
