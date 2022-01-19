@@ -1,6 +1,14 @@
 import { useState } from "react";
 
 function CreateTrack(props) {
+  const [formState, setFormState] = useState({
+    title: "",
+    artist: "",
+    coverArt: "",
+    project: "",
+    genre: "",
+  });
+
   return (
     <div className="create-track">
       <h2>Create a Track</h2>
