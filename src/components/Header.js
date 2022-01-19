@@ -19,20 +19,21 @@ function Header(props) {
         />
       </Link>
       {props.user ? (
-        <div>
-          <img
-            src={props.user.photoURL}
-            alt={props.user.displayName}
-            style={{
-              height: "3.125rem",
-              width: "3.125rem",
-              borderRadius: "50%",
-            }}
-          />
-          <button onClick={logout}>Logout</button>
-        </div>
+        <input
+          type="image"
+          src="https://i.imgur.com/NVAHAOs.png"
+          alt="logout-icon"
+          style={{ height: "25px", width: "25px" }}
+          onClick={logout}
+        />
       ) : (
-        <button onClick={login}>Login</button>
+        <input
+          type="image"
+          src="https://i.imgur.com/IIUGvUg.png"
+          alt="login-icon"
+          style={{ height: "25px", width: "25px" }}
+          onClick={login}
+        />
       )}
     </nav>
   );
