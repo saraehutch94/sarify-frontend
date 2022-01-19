@@ -68,15 +68,15 @@ function Main(props) {
             <Track
               {...rp}
               tracks={tracks}
-              URL={URL}
               updateTrack={updateTrack}
               deleteTrack={deleteTrack}
             />
           )}
         />
-        <Route path="/sarify/create">
-          <CreateTrack createTrack={createTrack} />
-        </Route>
+        <Route
+          path="/sarify/create"
+          render={(rp) => <CreateTrack createTrack={createTrack} />}
+        />
       </Switch>
     </div>
   );
