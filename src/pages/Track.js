@@ -7,8 +7,6 @@ function Track(props) {
   const [trackForm, setTrackForm] = useState(foundTrack);
   const [update, setUpdate] = useState(false);
 
-  console.log(update);
-
   const handleChange = (e) => {
     setTrackForm({
       ...trackForm,
@@ -78,7 +76,7 @@ function Track(props) {
           />
         </label>
         <br />
-        <input type="submit" value="Update Track" />
+        <input type="submit" value="Submit Changes" />
       </form>
     );
   };
