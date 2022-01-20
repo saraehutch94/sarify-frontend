@@ -7,6 +7,8 @@ function Track(props) {
   const [trackForm, setTrackForm] = useState(foundTrack);
   const [update, setUpdate] = useState(false);
 
+  console.log(update);
+
   const handleChange = (e) => {
     setTrackForm({
       ...trackForm,
@@ -24,19 +26,12 @@ function Track(props) {
     props.history.push("/sarify/tracks");
   };
 
-  return (
-    <div className="ind-track">
-      <img
-        src={foundTrack.coverArt}
-        alt={foundTrack.project}
-        style={{ height: "200px", width: "200px" }}
-      />
-      <h2>{foundTrack.title}</h2>
-      <h3>{foundTrack.artist}</h3>
-      <p>Project: {foundTrack.project}</p>
-      <p>Genre: {foundTrack.genre}</p>
+  const handleForm = () => {
+    !update ? setUpdate(true) : setUpdate(false);
+  };
 
-      <button>Update Track</button>
+  const updateForm = () => {
+    return (
       <form onSubmit={handleSubmit}>
         <label>
           <input
@@ -85,6 +80,22 @@ function Track(props) {
         <br />
         <input type="submit" value="Update Track" />
       </form>
+    );
+  };
+
+  return (
+    <div className="ind-track">
+      <img
+        src={foundTrack.coverArt}
+        alt={foundTrack.project}
+        style={{ height: "200px", width: "200px" }}
+      />
+      <h2>{foundTrack.title}</h2>
+      <h3>{foundTrack.artist}</h3>
+      <p>Project: {foundTrack.project}</p>
+      <p>Genre: {foundTrack.genre}</p>
+
+      <button onClick={handleForm}>Update Track</button>
       <button onClick={handleDelete}>Delete Track</button>
     </div>
   );
