@@ -78,7 +78,7 @@ function Tracks(props) {
                   alt={filteredTrack.title}
                   style={{ height: "200px", width: "200px" }}
                 />
-                <Link to={`sarify/tracks/${filteredTrack._id}`}>
+                <Link to={`/sarify/tracks/${filteredTrack._id}`}>
                   <h2>{filteredTrack.title}</h2>
                 </Link>
               </div>
@@ -117,7 +117,7 @@ function Tracks(props) {
                   alt={filteredTrack.title}
                   style={{ height: "200px", width: "200px" }}
                 />
-                <Link to={`sarify/tracks/${filteredTrack._id}`}>
+                <Link to={`/sarify/tracks/${filteredTrack._id}`}>
                   <h2>{filteredTrack.title}</h2>
                 </Link>
               </div>
@@ -156,7 +156,7 @@ function Tracks(props) {
                   alt={filteredTrack.title}
                   style={{ height: "200px", width: "200px" }}
                 />
-                <Link to={`sarify/tracks/${filteredTrack._id}`}>
+                <Link to={`/sarify/tracks/${filteredTrack._id}`}>
                   <h2>{filteredTrack.title}</h2>
                 </Link>
               </div>
