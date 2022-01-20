@@ -5,6 +5,11 @@ function Tracks(props) {
   const [trackState, setTracks] = useState();
   const tracks = props.tracks;
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("hello");
+  };
+
   const loaded = () => {
     return (
       <div className="tracks">
@@ -15,7 +20,7 @@ function Tracks(props) {
         </div>
 
         <form onSubmit={handleSubmit}>
-          <label for="genre">Select Genre:</label>
+          <label htmlFor="genre">Select Genre:</label>
           <select name="genre" id="genre">
             <option value="All">All Genres</option>
             <option value="Hip-Hop">Hip-Hop</option>
