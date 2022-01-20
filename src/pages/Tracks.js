@@ -1,8 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { useState } from "react";
-
 function Tracks(props) {
+  const [tracks, setTracks] = useState();
   const tracks = props.tracks;
 
   const loaded = () => {
@@ -15,6 +15,7 @@ function Tracks(props) {
         </div>
         <label for="genre">Select Genre:</label>
         <select name="genre" id="genre">
+          <option value="All">All Genres</option>
           <option value="Hip-Hop">Hip-Hop</option>
           <option value="R&B">R&B</option>
           <option value="Alternative">Alternative</option>
