@@ -36,7 +36,7 @@ function Track(props) {
       <p>Genre: {foundTrack.genre}</p>
 
       <button onClick={toggleForm}>Update Track</button>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{ display: "none" }}>
         <label>
           <input
             type="text"
