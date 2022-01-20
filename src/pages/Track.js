@@ -34,8 +34,8 @@ function Track(props) {
       <h3>{foundTrack.artist}</h3>
       <p>Project: {foundTrack.project}</p>
       <p>Genre: {foundTrack.genre}</p>
-      <button onClick={handleDelete}>Delete Track</button>
-      <h2>Update Track:</h2>
+
+      <button onClick={toggleForm}>Update Track</button>
       <form onSubmit={handleSubmit}>
         <label>
           <input
@@ -84,6 +84,7 @@ function Track(props) {
         <br />
         <input type="submit" value="Update Track" />
       </form>
+      <button onClick={handleDelete}>Delete Track</button>
     </div>
   );
 }
