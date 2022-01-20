@@ -3,6 +3,8 @@ import { useState, useRef } from "react";
 function Track(props) {
   const id = props.match.params.id;
   const foundTrack = props.tracks.find((track) => track._id === id);
+  const formRef = useRef();
+  console.log(formRef);
 
   const [trackForm, setTrackForm] = useState(foundTrack);
 
@@ -36,7 +38,7 @@ function Track(props) {
       <p>Genre: {foundTrack.genre}</p>
 
       <button>Update Track</button>
-      <form onSubmit={handleSubmit}>
+      <form ref={formRef} onSubmit={handleSubmit}>
         <label>
           <input
             type="text"
