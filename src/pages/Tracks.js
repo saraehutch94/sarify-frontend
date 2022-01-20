@@ -2,12 +2,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Tracks(props) {
-  const [trackState, setTracks] = useState();
+  const [trackState, setTracks] = useState(null);
   const tracks = props.tracks;
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
     e.preventDefault();
-    console.log("hello");
+    console.log(e.target.value);
   };
 
   const loaded = () => {
@@ -19,16 +19,13 @@ function Tracks(props) {
           </Link>
         </div>
 
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="genre">Select Genre:</label>
-          <select name="genre" id="genre">
-            <option value="All">All Genres</option>
-            <option value="Hip-Hop">Hip-Hop</option>
-            <option value="R&B">R&B</option>
-            <option value="Alternative">Alternative</option>
-          </select>
-          <input type="submit" value="Get Genre" />
-        </form>
+        <label htmlFor="genre">Select Genre:</label>
+        <select name="genre" id="genre" onChange={handleChange}>
+          <option value="All">All Genres</option>
+          <option value="Hip-Hop">Hip-Hop</option>
+          <option value="R&B">R&B</option>
+          <option value="Alternative">Alternative</option>
+        </select>
 
         <div className="all-tracks">
           {tracks.map((track) => {
