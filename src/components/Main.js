@@ -2,7 +2,7 @@ import Home from "../pages/Home";
 import Tracks from "../pages/Tracks";
 import Track from "../pages/Track";
 import CreateTrack from "../pages/CreateTrack";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Main(props) {
@@ -76,7 +76,13 @@ function Main(props) {
         />
         <Route
           path="/sarify/create"
-          render={(rp) => <CreateTrack {...rp} createTrack={createTrack} />}
+          render={(rp) =>
+            props.user ? (
+              <CreateTrack {...rp} createTrack={createTrack} />
+            ) : (
+              <Redirect to="/sarify/tracks" />
+            )
+          }
         />
       </Switch>
     </div>

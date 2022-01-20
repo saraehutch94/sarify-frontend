@@ -7,7 +7,9 @@ function Tracks(props) {
     return (
       <div className="tracks">
         <div className="contribute-link">
-          <Link to="/sarify/create">Contribute</Link>
+          <Link to="/sarify/create">
+            <button disabled={!props.user}>Contribute</button>
+          </Link>
         </div>
         <div className="all-tracks">
           {tracks.map((track) => {
