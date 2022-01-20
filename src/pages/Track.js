@@ -93,7 +93,9 @@ function Track(props) {
       <h3>{foundTrack.artist}</h3>
       <p>Project: {foundTrack.project}</p>
       <p>Genre: {foundTrack.genre}</p>
-
+      {!props.user ? (
+        <h4>Please login to make changes to the playlist</h4>
+      ) : null}
       <button disabled={!props.user} onClick={handleForm}>
         Update Track
       </button>
