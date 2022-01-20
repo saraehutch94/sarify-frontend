@@ -56,7 +56,7 @@ function Main(props) {
   return (
     <div className="main-component">
       <Switch>
-        <Route exact path="/sarify/home">
+        <Route exact path="/sarify">
           <Home />
         </Route>
         <Route exact path="/sarify/tracks">
