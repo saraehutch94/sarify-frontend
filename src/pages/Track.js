@@ -96,6 +96,7 @@ function Track(props) {
       <p>Genre: {foundTrack.genre}</p>
 
       <button onClick={handleForm}>Update Track</button>
+      {update ? updateForm() : null}
       <button onClick={handleDelete}>Delete Track</button>
     </div>
   );
