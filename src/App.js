@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Header user={user} />
-      <Main />
+      <Main user={user} />
       <Footer />
     </div>
   );
