@@ -11,6 +11,13 @@ function Tracks(props) {
             <button disabled={!props.user}>Contribute</button>
           </Link>
         </div>
+        <label for="genre">Select Genre:</label>
+        <select name="genre" id="genre">
+          <option value="Hip-Hop">Hip-Hop</option>
+          <option value="R&B">R&B</option>
+          <option value="Alternative">Alternative</option>
+        </select>
+        <input type="submit" value="Get Genre" />
         <div className="all-tracks">
           {tracks.map((track) => {
             return (
