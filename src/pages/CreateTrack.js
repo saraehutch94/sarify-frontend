@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 function CreateTrack(props) {
-  console.log(props);
   const [formState, setFormState] = useState({
     title: "",
     artist: "",
