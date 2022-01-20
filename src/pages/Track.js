@@ -5,6 +5,7 @@ function Track(props) {
   const foundTrack = props.tracks.find((track) => track._id === id);
 
   const [trackForm, setTrackForm] = useState(foundTrack);
+  const [update, setUpdate] = useState(false);
 
   const handleChange = (e) => {
     setTrackForm({
