@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Tracks(props) {
-  const [tracks, setTracks] = useState();
+  const [trackState, setTracks] = useState();
   const tracks = props.tracks;
 
   const loaded = () => {
