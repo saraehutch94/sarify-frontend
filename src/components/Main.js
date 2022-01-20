@@ -70,6 +70,7 @@ function Main(props) {
               tracks={tracks}
               updateTrack={updateTrack}
               deleteTrack={deleteTrack}
+              user={props.user}
             />
           )}
         />
