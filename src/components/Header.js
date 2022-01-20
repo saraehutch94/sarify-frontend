@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Header(props) {
   return (
     <nav>
-      <Link to="/sarify/home">
+      <Link to="/">
         <img
           src="https://i.imgur.com/vBc6UJb.png"
           alt="home-icon"
