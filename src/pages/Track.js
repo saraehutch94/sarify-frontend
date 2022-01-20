@@ -17,6 +17,7 @@ function Track(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.updateTrack(trackForm, id);
+    setUpdate(false);
   };
 
   const handleDelete = () => {
