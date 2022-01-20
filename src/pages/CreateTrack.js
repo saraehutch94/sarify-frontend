@@ -32,6 +32,14 @@ function CreateTrack(props) {
   return (
     <div className="create-track">
       <h1>Create a Track</h1>
+      <div
+        className="create-coverArt"
+        style={{
+          background: "black",
+          height: "200px",
+          width: "200px",
+        }}
+      ></div>
       <form onSubmit={handleSubmit}>
         <label>
           <input
