@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function Track(props) {
   const id = props.match.params.id;
@@ -35,8 +35,8 @@ function Track(props) {
       <p>Project: {foundTrack.project}</p>
       <p>Genre: {foundTrack.genre}</p>
 
-      <button onClick={toggleForm}>Update Track</button>
-      <form onSubmit={handleSubmit} style={{ display: "none" }}>
+      <button>Update Track</button>
+      <form onSubmit={handleSubmit}>
         <label>
           <input
             type="text"
