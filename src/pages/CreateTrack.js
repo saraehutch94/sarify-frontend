@@ -32,14 +32,30 @@ function CreateTrack(props) {
   return (
     <div className="create-track">
       <h1>Create a Track</h1>
-      <div
-        className="create-coverArt"
-        style={{
-          background: "black",
-          height: "200px",
-          width: "200px",
-        }}
-      ></div>
+
+      {formState.coverArt.includes("jpg", "png") ? (
+        <div
+          className="create-coverArt"
+          style={{
+            background: `url(${formState.coverArt})`,
+            backgroundSize: "cover",
+            height: "200px",
+            width: "200px",
+          }}
+        ></div>
+      ) : (
+        <div
+          className="create-coverArt"
+          style={{
+            color: "white",
+            background: "black",
+            height: "200px",
+            width: "200px",
+          }}
+        >
+          Cover Art will appear here
+        </div>
+      )}
       <form onSubmit={handleSubmit}>
         <label>
           <input
