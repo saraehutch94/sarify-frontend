@@ -33,7 +33,7 @@ function CreateTrack(props) {
     <div className="create-track">
       <h1>Create a Track</h1>
 
-      {formState.coverArt.includes("jpg", "png") ? (
+      {formState.coverArt.includes("jpg", "jpeg") ? (
         <div
           className="create-coverArt"
           style={{
@@ -107,7 +107,11 @@ function CreateTrack(props) {
           />
         </label>
         <br />
-        <input type="submit" value="Add Track" />
+        <input
+          disabled={!formState.coverArt.includes("jpg")}
+          type="submit"
+          value="Add Track"
+        />
       </form>
     </div>
   );
