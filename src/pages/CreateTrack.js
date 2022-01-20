@@ -31,8 +31,7 @@ function CreateTrack(props) {
 
   return (
     <div className="create-track">
-      <h2>Create a Track</h2>
-      <h2>Add a Track:</h2>
+      <h1>Create a Track</h1>
       <form onSubmit={handleSubmit}>
         <label>
           <input
