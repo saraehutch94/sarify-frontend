@@ -36,7 +36,7 @@ function Tracks(props) {
                 <img
                   src={track.coverArt}
                   alt={track.title}
-                  style={{ height: "100px", width: "100px" }}
+                  style={{ height: "200px", width: "200px" }}
                 />
                 <Link to={`/sarify/tracks/${track._id}`}>
                   <h2>{track.title}</h2>
@@ -170,11 +170,19 @@ function Tracks(props) {
     return <h1>Curating...</h1>;
   };
 
-  return (
-    <div className="tracks-component">
-      {props.tracks ? allLoaded() : loading()}
-    </div>
-  );
+  const determineLoad = () => {
+    if (trackState === "All") {
+      return allLoaded();
+    } else if (trackState === "Hip-Hop") {
+      return hipHopLoaded();
+    } else if (trackState === "R&B") {
+      return rnBLoaded();
+    } else {
+      return alternativeLoaded();
+    }
+  };
+
+  return <div>{props.tracks ? determineLoad() : loading()}</div>;
 }
 
 export default Tracks;
