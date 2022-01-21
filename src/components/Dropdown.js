@@ -1,5 +1,5 @@
 function Dropdown(props) {
-  const handleChange = () => {
+  const handleChange = (e) => {
     props.setGenre(e.target.value);
   };
 

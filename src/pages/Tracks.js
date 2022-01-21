@@ -20,7 +20,7 @@ function Tracks(props) {
           </Link>
         </div>
 
-        <label htmlFor="genre">Select Genre:</label>
+        {/* <label htmlFor="genre">Select Genre:</label>
         <select name="genre" id="genre" onChange={handleChange}>
           <option select="true" value="All">
             All Genres
@@ -28,7 +28,7 @@ function Tracks(props) {
           <option value="Hip-Hop">Hip-Hop</option>
           <option value="R&B">R&B</option>
           <option value="Alternative">Alternative</option>
-        </select>
+        </select> */}
 
         <Dropdown setGenre={setGenre} />
 
