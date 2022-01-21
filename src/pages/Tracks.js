@@ -6,9 +6,8 @@ function Tracks(props) {
   const [trackState, setTracks] = useState("All");
   const tracks = props.tracks;
 
-  const setGenre = (e) => {
-    e.preventDefault();
-    setTracks(e.target.value);
+  const setGenre = (genre) => {
+    setTracks(genre);
   };
 
   const allLoaded = () => {
@@ -61,7 +60,9 @@ function Tracks(props) {
           </Link>
         </div>
 
-        <label htmlFor="genre">Select Genre:</label>
+        <Dropdown setGenre={setGenre} />
+
+        {/* <label htmlFor="genre">Select Genre:</label>
         <select name="genre" id="genre" onChange={handleChange}>
           <option select="true" value="All">
             All Genres
@@ -69,7 +70,7 @@ function Tracks(props) {
           <option value="Hip-Hop">Hip-Hop</option>
           <option value="R&B">R&B</option>
           <option value="Alternative">Alternative</option>
-        </select>
+        </select> */}
 
         <div className="all-tracks">
           {tracks
