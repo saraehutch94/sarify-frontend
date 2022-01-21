@@ -49,7 +49,7 @@ function Tracks(props) {
     );
   };
 
-  const hipHopLoaded = () => {
+  const genreLoaded = () => {
     return (
       <div className="tracks">
         <div className="contribute-link">
@@ -70,85 +70,7 @@ function Tracks(props) {
 
         <div className="all-tracks">
           {tracks
-            .filter((t) => t.genre === "Hip-Hop")
-            .map((filteredTrack) => (
-              <div key={filteredTrack._id} className="ind-track">
-                <img
-                  src={filteredTrack.coverArt}
-                  alt={filteredTrack.title}
-                  style={{ height: "200px", width: "200px" }}
-                />
-                <Link to={`/sarify/tracks/${filteredTrack._id}`}>
-                  <h2>{filteredTrack.title}</h2>
-                </Link>
-              </div>
-            ))}
-        </div>
-      </div>
-    );
-  };
-
-  const rnBLoaded = () => {
-    return (
-      <div className="tracks">
-        <div className="contribute-link">
-          <Link to="/sarify/create">
-            <button disabled={!props.user}>Contribute</button>
-          </Link>
-        </div>
-
-        <label htmlFor="genre">Select Genre:</label>
-        <select name="genre" id="genre" onChange={handleChange}>
-          <option select="true" value="All">
-            All Genres
-          </option>
-          <option value="Hip-Hop">Hip-Hop</option>
-          <option value="R&B">R&B</option>
-          <option value="Alternative">Alternative</option>
-        </select>
-
-        <div className="all-tracks">
-          {tracks
-            .filter((t) => t.genre === "R&B")
-            .map((filteredTrack) => (
-              <div key={filteredTrack._id} className="ind-track">
-                <img
-                  src={filteredTrack.coverArt}
-                  alt={filteredTrack.title}
-                  style={{ height: "200px", width: "200px" }}
-                />
-                <Link to={`/sarify/tracks/${filteredTrack._id}`}>
-                  <h2>{filteredTrack.title}</h2>
-                </Link>
-              </div>
-            ))}
-        </div>
-      </div>
-    );
-  };
-
-  const alternativeLoaded = () => {
-    return (
-      <div className="tracks">
-        <div className="contribute-link">
-          <Link to="/sarify/create">
-            <button disabled={!props.user}>Contribute</button>
-          </Link>
-        </div>
-
-        <label htmlFor="genre">Select Genre:</label>
-        <select name="genre" id="genre" onChange={handleChange}>
-          <option select="true" value="All">
-            All Genres
-          </option>
-          <option value="Hip-Hop">Hip-Hop</option>
-          <option value="R&B">R&B</option>
-          <option value="Alternative">Alternative</option>
-        </select>
-
-        <div className="all-tracks">
-          {tracks
-            .filter((t) => t.genre === "Alternative")
+            .filter((t) => t.genre === trackState)
             .map((filteredTrack) => (
               <div key={filteredTrack._id} className="ind-track">
                 <img
@@ -171,15 +93,7 @@ function Tracks(props) {
   };
 
   const determineLoad = () => {
-    if (trackState === "All") {
-      return allLoaded();
-    } else if (trackState === "Hip-Hop") {
-      return hipHopLoaded();
-    } else if (trackState === "R&B") {
-      return rnBLoaded();
-    } else {
-      return alternativeLoaded();
-    }
+    return trackState === "All" ? allLoaded() : genreLoaded();
   };
 
   return <div>{props.tracks ? determineLoad() : loading()}</div>;
