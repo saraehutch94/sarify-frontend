@@ -19,16 +19,6 @@ function Tracks(props) {
           </Link>
         </div>
 
-        {/* <label htmlFor="genre">Select Genre:</label>
-        <select name="genre" id="genre" onChange={handleChange}>
-          <option select="true" value="All">
-            All Genres
-          </option>
-          <option value="Hip-Hop">Hip-Hop</option>
-          <option value="R&B">R&B</option>
-          <option value="Alternative">Alternative</option>
-        </select> */}
-
         <Dropdown setGenre={setGenre} />
 
         <div className="all-tracks">
@@ -61,16 +51,6 @@ function Tracks(props) {
         </div>
 
         <Dropdown setGenre={setGenre} />
-
-        {/* <label htmlFor="genre">Select Genre:</label>
-        <select name="genre" id="genre" onChange={handleChange}>
-          <option select="true" value="All">
-            All Genres
-          </option>
-          <option value="Hip-Hop">Hip-Hop</option>
-          <option value="R&B">R&B</option>
-          <option value="Alternative">Alternative</option>
-        </select> */}
 
         <div className="all-tracks">
           {tracks
