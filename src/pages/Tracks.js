@@ -6,7 +6,7 @@ function Tracks(props) {
   const [trackState, setTracks] = useState("All");
   const tracks = props.tracks;
 
-  const handleChange = (e) => {
+  const setGenre = (e) => {
     e.preventDefault();
     setTracks(e.target.value);
   };
@@ -30,7 +30,7 @@ function Tracks(props) {
           <option value="Alternative">Alternative</option>
         </select>
 
-        <Dropdown handleChange={handleChange} />
+        <Dropdown handleChange={setGenre} />
 
         <div className="all-tracks">
           {tracks.map((track) => {
