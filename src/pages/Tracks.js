@@ -30,7 +30,7 @@ function Tracks(props) {
           <option value="Alternative">Alternative</option>
         </select>
 
-        <Dropdown />
+        <Dropdown handleChange={handleChange} />
 
         <div className="all-tracks">
           {tracks.map((track) => {
