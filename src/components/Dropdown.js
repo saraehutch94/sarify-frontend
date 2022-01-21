@@ -1,4 +1,8 @@
-function Dropdown() {
+function Dropdown(props) {
+  const handleChange = () => {
+    props.setGenre(e.target.value);
+  };
+
   return (
     <div className="dropdown-menu">
       <label htmlFor="genre">Select Genre:</label>
