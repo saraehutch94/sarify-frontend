@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Dropdown from "../components/Dropdown";
 import { Link } from "react-router-dom";
 
 function Tracks(props) {
@@ -28,6 +29,8 @@ function Tracks(props) {
           <option value="R&B">R&B</option>
           <option value="Alternative">Alternative</option>
         </select>
+
+        <Dropdown />
 
         <div className="all-tracks">
           {tracks.map((track) => {
