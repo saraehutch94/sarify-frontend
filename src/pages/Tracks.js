@@ -30,7 +30,7 @@ function Tracks(props) {
           <option value="Alternative">Alternative</option>
         </select>
 
-        <Dropdown handleChange={setGenre} />
+        <Dropdown setGenre={setGenre} />
 
         <div className="all-tracks">
           {tracks.map((track) => {
