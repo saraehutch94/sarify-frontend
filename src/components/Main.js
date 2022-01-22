@@ -2,6 +2,7 @@ import Home from "../pages/Home";
 import Tracks from "../pages/Tracks";
 import Track from "../pages/Track";
 import CreateTrack from "../pages/CreateTrack";
+import Dashboard from "../pages/Dashboard";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { useState, useEffect } from "react";
 
