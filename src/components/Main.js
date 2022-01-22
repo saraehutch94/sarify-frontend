@@ -89,6 +89,12 @@ function Main(props) {
             )
           }
         />
+        <Route
+          path="/sarify/dashboard"
+          render={(rp) =>
+            props.user ? <Dashboard {...rp} /> : <Redirect to="/" />
+          }
+        />
       </Switch>
     </div>
   );

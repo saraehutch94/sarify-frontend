@@ -19,13 +19,22 @@ function Header(props) {
         />
       </Link>
       {props.user ? (
-        <input
-          type="image"
-          src="https://i.imgur.com/NVAHAOs.png"
-          alt="logout-icon"
-          style={{ height: "25px", width: "25px" }}
-          onClick={logout}
-        />
+        <>
+          <input
+            type="image"
+            src="https://i.imgur.com/NVAHAOs.png"
+            alt="logout-icon"
+            style={{ height: "25px", width: "25px" }}
+            onClick={logout}
+          />
+          <Link to="/sarify/dashboard">
+            <img
+              src="https://i.imgur.com/XoB7FBu.png"
+              alt="dashboard-icon"
+              style={{ height: "25px", width: "25px" }}
+            />
+          </Link>
+        </>
       ) : (
         <input
           type="image"
