@@ -13,6 +13,7 @@ function Dropdown(props) {
         <option value="Hip-Hop">Hip-Hop</option>
         <option value="R&B">R&B</option>
         <option value="Alternative">Alternative</option>
+        <option value="Electronic">Electronic</option>
       </select>
     </div>
   );
