@@ -27,6 +27,7 @@ function Main(props) {
       method: "POST",
       headers: {
         "Content-Type": "Application/json",
+        Authorization: "Bearer: " + token,
       },
       body: JSON.stringify(track),
     });
