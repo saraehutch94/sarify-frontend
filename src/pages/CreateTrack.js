@@ -32,8 +32,9 @@ function CreateTrack(props) {
   return (
     <div className="create-track">
       <h1>Create a Track</h1>
-
-      {formState.coverArt.includes("jpg", "jpeg") ? (
+      {["jpg", "jpeg", "png"].some((files) =>
+        formState.coverArt.includes(files)
+      ) ? (
         <div
           className="create-coverArt"
           style={{
