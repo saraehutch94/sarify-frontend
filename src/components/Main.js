@@ -22,6 +22,7 @@ function Main(props) {
   const createTrack = async (track) => {
     if (!props.user) return;
     const token = await props.user.getIdToken();
+    console.log(token);
     await fetch(URL, {
       method: "POST",
       headers: {
