@@ -8,7 +8,8 @@ import { useState, useEffect } from "react";
 function Main(props) {
   const [tracks, setTracks] = useState([]);
 
-  const URL = "https://sarify-backend.herokuapp.com/sarify/tracks/";
+  // const URL = "https://sarify-backend.herokuapp.com/sarify/tracks/";
+  const URL = "http://localhost:3001/sarify/tracks";
 
   // index/all tracks
   const getTracks = async () => {
@@ -19,6 +20,8 @@ function Main(props) {
 
   // create track
   const createTrack = async (track) => {
+    if (!props.user) return;
+    const token = await props.user.getIdToken();
     await fetch(URL, {
       method: "POST",
       headers: {
