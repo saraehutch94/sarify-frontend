@@ -6,6 +6,7 @@ function Header(props) {
   return (
     <header>
       <div className="title">sarify</div>
+      <div className="underline-header"></div>
       <nav className="nav-icons">
         <Link to="/">
           <img

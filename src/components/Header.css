@@ -2,6 +2,7 @@ header {
   display: flex;
   align-items: center;
   background-color: black;
+  position: relative;
 }
 
 .title {
@@ -9,6 +10,15 @@ header {
   font-family: "DM Serif Text", serif;
   font-size: 50px;
   padding-left: 20px;
+}
+
+.underline-header {
+  position: absolute;
+  bottom: 8px;
+  left: 20px;
+  height: 2px;
+  width: 67px;
+  background-color: #ff4e00;
 }
 
 .nav-icons {
