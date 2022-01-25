@@ -5,7 +5,7 @@ import "./Header.css";
 function Header(props) {
   return (
     <header>
-      <div className="title">Sarify</div>
+      <div className="title">sarify</div>
       <nav className="nav-icons">
         <Link to="/">
           <img

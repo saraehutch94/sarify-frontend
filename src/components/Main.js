@@ -58,7 +58,7 @@ function Main(props) {
     <div className="main-component">
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Home user={props.user} />
         </Route>
         <Route exact path="/sarify/tracks">
           <Header user={props.user} />
