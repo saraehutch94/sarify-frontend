@@ -13,26 +13,9 @@ function Home(props) {
               <div className="music-icon"></div>
             </Link>
             {props.user ? (
-              <input
-                type="image"
-                src="https://i.imgur.com/NVAHAOs.png"
-                alt="logout-icon"
-                style={{ height: "25px", width: "25px" }}
-                onClick={logout}
-              />
+              <div className="google-logout-icon" onClick={logout}></div>
             ) : (
               <div className="google-login-icon" onClick={login}></div>
-              // <input
-              //   type="image"
-              //   src="https://i.imgur.com/IIUGvUg.png"
-              //   alt="login-icon"
-              //   style={{
-              //     height: "25px",
-              //     width: "25px",
-              //     filter: "brightness(0) invert(1)",
-              //   }}
-              //   onClick={login}
-              // />
             )}
             <a
               href="https://github.com/saraehutch94/sarify-frontend"
