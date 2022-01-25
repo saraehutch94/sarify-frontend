@@ -10,15 +10,7 @@ function Home(props) {
           <h1>sarify</h1>
           <div className="home-nav">
             <Link to="/sarify/tracks">
-              <img
-                src="https://i.imgur.com/72xhKjz.png"
-                alt="tracks-icon"
-                style={{
-                  height: "25px",
-                  width: "25px",
-                  filter: "brightness(0) invert(1)",
-                }}
-              />
+              <div className="music-icon"></div>
             </Link>
             {props.user ? (
               <input
@@ -29,17 +21,18 @@ function Home(props) {
                 onClick={logout}
               />
             ) : (
-              <input
-                type="image"
-                src="https://i.imgur.com/IIUGvUg.png"
-                alt="login-icon"
-                style={{
-                  height: "25px",
-                  width: "25px",
-                  filter: "brightness(0) invert(1)",
-                }}
-                onClick={login}
-              />
+              <div className="google-login-icon" onClick={login}></div>
+              // <input
+              //   type="image"
+              //   src="https://i.imgur.com/IIUGvUg.png"
+              //   alt="login-icon"
+              //   style={{
+              //     height: "25px",
+              //     width: "25px",
+              //     filter: "brightness(0) invert(1)",
+              //   }}
+              //   onClick={login}
+              // />
             )}
             <a
               href="https://github.com/saraehutch94/sarify-frontend"
