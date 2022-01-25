@@ -1,6 +1,6 @@
 function Footer(props) {
   return (
-    <div
+    <footer
       className="footer"
       style={{ color: "white", backgroundColor: "black" }}
     >
@@ -15,7 +15,7 @@ function Footer(props) {
         </a>
         <div>Created by Sara Hutchinson</div>
       </div>
-    </div>
+    </footer>
   );
 }
 

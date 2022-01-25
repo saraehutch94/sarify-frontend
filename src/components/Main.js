@@ -1,4 +1,5 @@
 import Home from "../pages/Home";
+import Header from "./Header";
 import Tracks from "../pages/Tracks";
 import Track from "../pages/Track";
 import CreateTrack from "../pages/CreateTrack";
@@ -60,25 +61,32 @@ function Main(props) {
           <Home />
         </Route>
         <Route exact path="/sarify/tracks">
+          <Header user={props.user} />
           <Tracks tracks={tracks} createTrack={createTrack} user={props.user} />
         </Route>
         <Route
           path="/sarify/tracks/:id"
           render={(rp) => (
-            <Track
-              {...rp}
-              tracks={tracks}
-              updateTrack={updateTrack}
-              deleteTrack={deleteTrack}
-              user={props.user}
-            />
+            <>
+              <Header user={props.user} />
+              <Track
+                {...rp}
+                tracks={tracks}
+                updateTrack={updateTrack}
+                deleteTrack={deleteTrack}
+                user={props.user}
+              />
+            </>
           )}
         />
         <Route
           path="/sarify/create"
           render={(rp) =>
             props.user ? (
-              <CreateTrack {...rp} createTrack={createTrack} />
+              <>
+                <Header user={props.user} />
+                <CreateTrack {...rp} createTrack={createTrack} />
+              </>
             ) : (
               <Redirect to="/sarify/tracks" />
             )
