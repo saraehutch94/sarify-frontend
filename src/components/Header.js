@@ -6,19 +6,27 @@ function Header(props) {
   return (
     <header>
       <div className="title">Sarify</div>
-      <nav>
+      <nav className="nav-icons">
         <Link to="/">
           <img
             src="https://i.imgur.com/vBc6UJb.png"
             alt="home-icon"
-            style={{ height: "25px", width: "25px" }}
+            style={{
+              height: "25px",
+              width: "25px",
+              filter: "brightness(0) invert(1)",
+            }}
           />
         </Link>
         <Link to="/sarify/tracks">
           <img
             src="https://i.imgur.com/72xhKjz.png"
             alt="tracks-icon"
-            style={{ height: "25px", width: "25px" }}
+            style={{
+              height: "25px",
+              width: "25px",
+              filter: "brightness(0) invert(1)",
+            }}
           />
         </Link>
         {props.user ? (
@@ -34,7 +42,11 @@ function Header(props) {
             type="image"
             src="https://i.imgur.com/IIUGvUg.png"
             alt="login-icon"
-            style={{ height: "25px", width: "25px" }}
+            style={{
+              height: "25px",
+              width: "25px",
+              filter: "brightness(0) invert(1)",
+            }}
             onClick={login}
           />
         )}

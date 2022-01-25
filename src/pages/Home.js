@@ -1,5 +1,13 @@
+import "./Home.css";
+
 function Home(props) {
-  return <h1>Home Component</h1>;
+  return (
+    <div className="home-page">
+      <div className="home-page-content">
+        <h1>Home Component</h1>
+      </div>
+    </div>
+  );
 }
 
 export default Home;

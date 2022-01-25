@@ -1,8 +1,19 @@
 header {
+  display: flex;
+  align-items: center;
   background-color: black;
 }
 
 .title {
   color: white;
   font-family: "DM Serif Text", serif;
+  font-size: 50px;
+  padding-left: 20px;
+}
+
+.nav-icons {
+  width: 25%;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-around;
 }
