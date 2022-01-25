@@ -44,4 +44,8 @@ h1 {
   .home-page-content {
     bottom: 150px;
   }
+
+  h1 {
+    font-size: 135px;
+  }
 }
