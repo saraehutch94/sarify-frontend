@@ -39,3 +39,9 @@ h1 {
     font-size: 100px;
   }
 }
+
+@media only screen and (min-height: 900px) {
+  .home-page-content {
+    bottom: 150px;
+  }
+}
