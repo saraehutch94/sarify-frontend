@@ -2,7 +2,7 @@ function Footer(props) {
   return (
     <footer
       className="footer"
-      style={{ color: "white", backgroundColor: "black" }}
+      style={{ color: "white", backgroundColor: "black", top: "100vh" }}
     >
       <div>2022 Sarify</div>
       <div>
