@@ -15,4 +15,12 @@
 h1 {
   font-size: 100px;
   color: white;
+  margin-bottom: 20px;
+}
+
+.home-nav {
+  width: 35%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
 }
