@@ -69,3 +69,22 @@
   align-items: center;
   justify-content: flex-end;
 }
+
+@media only screen and (max-width: 1064px) {
+  .all-tracks {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 712px) {
+  .all-tracks {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 562px) {
+  .all-tracks {
+    font-size: 13px;
+    width: 100%;
+  }
+}
