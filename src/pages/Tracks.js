@@ -71,29 +71,29 @@ function Tracks(props) {
             .filter((t) => t.genre === trackState)
             .map((filteredTrack) => (
               <div key={filteredTrack._id} className="ind-track">
-                <div className="grid-element">
-                  <img
-                    src={filteredTrack.coverArt}
-                    alt={filteredTrack.title}
-                    style={{ height: "50px", width: "50px" }}
-                  />
-                </div>
                 <Link
                   to={`/sarify/tracks/${filteredTrack._id}`}
-                  className="grid-element"
+                  style={{ textDecoration: "none" }}
                 >
-                  <div>{filteredTrack.title}</div>
+                  <div className="track-grid">
+                    <img
+                      src={filteredTrack.coverArt}
+                      alt={filteredTrack.title}
+                      style={{ height: "50px", width: "50px" }}
+                    />
+                    <div className="grid-item-title">{filteredTrack.title}</div>
+                    <div className="grid-item">{filteredTrack.artist}</div>
+                    <div className="grid-item">{filteredTrack.duration}</div>
+                    <div className="grid-item-play">
+                      <input
+                        type="image"
+                        alt="play-icon"
+                        src="https://i.imgur.com/7fRCgab.png"
+                        className="play-icon"
+                      />
+                    </div>
+                  </div>
                 </Link>
-                <div className="grid-element">{filteredTrack.artist}</div>
-                <div className="grid-element">{filteredTrack.duration}</div>
-                <div className="grid-element">
-                  <input
-                    type="image"
-                    alt="play-icon"
-                    src="https://i.imgur.com/7fRCgab.png"
-                    className="play-icon"
-                  />
-                </div>
               </div>
             ))}
         </div>
