@@ -92,7 +92,7 @@ function Track(props) {
   };
 
   return (
-    <div className="ind-track">
+    <div className="single-track">
       <img
         src={foundTrack.coverArt}
         alt={foundTrack.project}
