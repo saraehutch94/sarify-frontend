@@ -24,22 +24,28 @@ function Tracks(props) {
           {tracks.map((track) => {
             return (
               <div key={track._id} className="ind-track">
-                <img
-                  src={track.coverArt}
-                  alt={track.title}
-                  style={{ height: "50px", width: "50px" }}
-                />
                 <Link to={`/sarify/tracks/${track._id}`}>
-                  <div>{track.title}</div>
+                  <div className="track-flex">
+                    <img
+                      src={track.coverArt}
+                      alt={track.title}
+                      style={{ height: "50px", width: "50px" }}
+                    />
+
+                    <div className="grid-item">{track.title}</div>
+
+                    <div className="grid-item">{track.artist}</div>
+                    <div className="grid-item">{track.duration}</div>
+                    <div className="grid-item-play">
+                      <input
+                        type="image"
+                        alt="play-icon"
+                        src="https://i.imgur.com/7fRCgab.png"
+                        className="play-icon"
+                      />
+                    </div>
+                  </div>
                 </Link>
-                <div>{track.artist}</div>
-                <div>{track.duration}</div>
-                <input
-                  type="image"
-                  alt="play-icon"
-                  src="https://i.imgur.com/7fRCgab.png"
-                  className="play-icon"
-                />
               </div>
             );
           })}
