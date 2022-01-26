@@ -14,39 +14,35 @@ function Tracks(props) {
   const allLoaded = () => {
     return (
       <div className="tracks-wrapper-whole">
-        <div className="tracks">
+        <div className="track-page-content">
           <Link to="/sarify/create">
             <button disabled={!props.user}>Contribute</button>
           </Link>
-
           <Dropdown setGenre={setGenre} />
-
-          <div className="tracks-wrapper">
-            <div className="all-tracks">
-              {tracks.map((track) => {
-                return (
-                  <div key={track._id} className="ind-track">
-                    <img
-                      src={track.coverArt}
-                      alt={track.title}
-                      style={{ height: "50px", width: "50px" }}
-                    />
-                    <Link to={`/sarify/tracks/${track._id}`}>
-                      <span>{track.title}</span>
-                    </Link>
-                    <span>{track.artist}</span>
-                    <span>{track.duration}</span>
-                    <input
-                      type="image"
-                      alt="play-icon"
-                      src="https://i.imgur.com/7fRCgab.png"
-                      className="play-icon"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+        </div>
+        <div className="all-tracks">
+          {tracks.map((track) => {
+            return (
+              <div key={track._id} className="ind-track">
+                <img
+                  src={track.coverArt}
+                  alt={track.title}
+                  style={{ height: "50px", width: "50px" }}
+                />
+                <Link to={`/sarify/tracks/${track._id}`}>
+                  <div>{track.title}</div>
+                </Link>
+                <div>{track.artist}</div>
+                <div>{track.duration}</div>
+                <input
+                  type="image"
+                  alt="play-icon"
+                  src="https://i.imgur.com/7fRCgab.png"
+                  className="play-icon"
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     );
@@ -54,29 +50,34 @@ function Tracks(props) {
 
   const genreLoaded = () => {
     return (
-      <div className="tracks-wrapper">
-        <div className="tracks">
+      <div className="tracks-wrapper-whole">
+        <div className="track-page-content">
           <Link to="/sarify/create">
             <button disabled={!props.user}>Contribute</button>
           </Link>
-
           <Dropdown setGenre={setGenre} />
-
-          <div className="all-tracks">
-            {tracks
-              .filter((t) => t.genre === trackState)
-              .map((filteredTrack) => (
-                <div key={filteredTrack._id} className="ind-track">
+        </div>
+        <div className="all-tracks">
+          {tracks
+            .filter((t) => t.genre === trackState)
+            .map((filteredTrack) => (
+              <div key={filteredTrack._id} className="ind-track">
+                <div className="grid-element">
                   <img
                     src={filteredTrack.coverArt}
                     alt={filteredTrack.title}
                     style={{ height: "50px", width: "50px" }}
                   />
-                  <Link to={`/sarify/tracks/${filteredTrack._id}`}>
-                    <span>{filteredTrack.title}</span>
-                  </Link>
-                  <span>{filteredTrack.artist}</span>
-                  <span>{filteredTrack.duration}</span>
+                </div>
+                <Link
+                  to={`/sarify/tracks/${filteredTrack._id}`}
+                  className="grid-element"
+                >
+                  <div>{filteredTrack.title}</div>
+                </Link>
+                <div className="grid-element">{filteredTrack.artist}</div>
+                <div className="grid-element">{filteredTrack.duration}</div>
+                <div className="grid-element">
                   <input
                     type="image"
                     alt="play-icon"
@@ -84,8 +85,8 @@ function Tracks(props) {
                     className="play-icon"
                   />
                 </div>
-              ))}
-          </div>
+              </div>
+            ))}
         </div>
       </div>
     );
