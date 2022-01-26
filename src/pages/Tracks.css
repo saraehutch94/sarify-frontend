@@ -1,0 +1,9 @@
+.tracks-wrapper {
+  height: 100vh;
+}
+
+.tracks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
