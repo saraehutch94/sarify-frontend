@@ -35,7 +35,12 @@ function Tracks(props) {
                   </Link>
                   <span>{track.artist}</span>
                   <span>{track.duration}</span>
-                  <span></span>
+                  <input
+                    type="image"
+                    alt="play-icon"
+                    src="https://i.imgur.com/4K2VSma.png"
+                    className="play-icon"
+                  />
                 </div>
               );
             })}
