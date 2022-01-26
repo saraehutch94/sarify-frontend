@@ -7,6 +7,7 @@ function CreateTrack(props) {
     coverArt: "",
     project: "",
     genre: "",
+    duration: "",
   });
 
   const handleChange = (e) => {
@@ -105,6 +106,16 @@ function CreateTrack(props) {
             value={formState.genre}
             onChange={handleChange}
             placeholder="Genre"
+          />
+        </label>
+        <br />
+        <label>
+          <input
+            type="text"
+            name="duration"
+            value={formState.duration}
+            onChange={handleChange}
+            placeholder="Duration"
           />
         </label>
         <br />

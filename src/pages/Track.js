@@ -77,6 +77,15 @@ function Track(props) {
           />
         </label>
         <br />
+        <label>
+          <input
+            type="text"
+            name="duration"
+            value={trackForm.duration}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
         <input type="submit" value="Submit Changes" />
       </form>
     );

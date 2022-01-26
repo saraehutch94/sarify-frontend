@@ -31,8 +31,9 @@ function Tracks(props) {
                     style={{ height: "200px", width: "200px" }}
                   />
                   <Link to={`/sarify/tracks/${track._id}`}>
-                    <h2>{track.title}</h2>
+                    <span>{track.title}</span>
                   </Link>
+                  <span>{track.artist}</span>
                 </div>
               );
             })}
