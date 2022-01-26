@@ -13,7 +13,7 @@ function Tracks(props) {
 
   const allLoaded = () => {
     return (
-      <div className="tracks-wrapper">
+      <div className="tracks-wrapper-whole">
         <div className="tracks">
           <Link to="/sarify/create">
             <button disabled={!props.user}>Contribute</button>
@@ -21,29 +21,31 @@ function Tracks(props) {
 
           <Dropdown setGenre={setGenre} />
 
-          <div className="all-tracks">
-            {tracks.map((track) => {
-              return (
-                <div key={track._id} className="ind-track">
-                  <img
-                    src={track.coverArt}
-                    alt={track.title}
-                    style={{ height: "200px", width: "200px" }}
-                  />
-                  <Link to={`/sarify/tracks/${track._id}`}>
-                    <span>{track.title}</span>
-                  </Link>
-                  <span>{track.artist}</span>
-                  <span>{track.duration}</span>
-                  <input
-                    type="image"
-                    alt="play-icon"
-                    src="https://i.imgur.com/7fRCgab.png"
-                    className="play-icon"
-                  />
-                </div>
-              );
-            })}
+          <div className="tracks-wrapper">
+            <div className="all-tracks">
+              {tracks.map((track) => {
+                return (
+                  <div key={track._id} className="ind-track">
+                    <img
+                      src={track.coverArt}
+                      alt={track.title}
+                      style={{ height: "50px", width: "50px" }}
+                    />
+                    <Link to={`/sarify/tracks/${track._id}`}>
+                      <span>{track.title}</span>
+                    </Link>
+                    <span>{track.artist}</span>
+                    <span>{track.duration}</span>
+                    <input
+                      type="image"
+                      alt="play-icon"
+                      src="https://i.imgur.com/7fRCgab.png"
+                      className="play-icon"
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
@@ -68,11 +70,19 @@ function Tracks(props) {
                   <img
                     src={filteredTrack.coverArt}
                     alt={filteredTrack.title}
-                    style={{ height: "200px", width: "200px" }}
+                    style={{ height: "50px", width: "50px" }}
                   />
                   <Link to={`/sarify/tracks/${filteredTrack._id}`}>
-                    <h2>{filteredTrack.title}</h2>
+                    <span>{filteredTrack.title}</span>
                   </Link>
+                  <span>{filteredTrack.artist}</span>
+                  <span>{filteredTrack.duration}</span>
+                  <input
+                    type="image"
+                    alt="play-icon"
+                    src="https://i.imgur.com/7fRCgab.png"
+                    className="play-icon"
+                  />
                 </div>
               ))}
           </div>

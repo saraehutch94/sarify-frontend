@@ -2,7 +2,7 @@
   font-family: "Rubik", sans-serif;
 }
 
-.tracks-wrapper {
+.tracks-wrapper-whole {
   height: 100vh;
 }
 
@@ -17,4 +17,9 @@
   width: 30px;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.ind-track {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
 }
