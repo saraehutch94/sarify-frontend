@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Dropdown from "../components/Dropdown";
 import { Link } from "react-router-dom";
+import "./Tracks.css";
 
 function Tracks(props) {
   const [trackState, setTracks] = useState("All");
