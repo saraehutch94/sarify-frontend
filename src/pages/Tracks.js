@@ -24,15 +24,18 @@ function Tracks(props) {
           {tracks.map((track) => {
             return (
               <div key={track._id} className="ind-track">
-                <Link to={`/sarify/tracks/${track._id}`}>
-                  <div className="track-flex">
+                <Link
+                  to={`/sarify/tracks/${track._id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className="track-grid">
                     <img
                       src={track.coverArt}
                       alt={track.title}
                       style={{ height: "50px", width: "50px" }}
                     />
 
-                    <div className="grid-item">{track.title}</div>
+                    <div className="grid-item-title">{track.title}</div>
 
                     <div className="grid-item">{track.artist}</div>
                     <div className="grid-item">{track.duration}</div>
