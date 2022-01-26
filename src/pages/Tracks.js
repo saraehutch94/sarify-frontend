@@ -38,7 +38,7 @@ function Tracks(props) {
                   <input
                     type="image"
                     alt="play-icon"
-                    src="https://i.imgur.com/4K2VSma.png"
+                    src="https://i.imgur.com/7fRCgab.png"
                     className="play-icon"
                   />
                 </div>
