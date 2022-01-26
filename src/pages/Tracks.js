@@ -34,6 +34,8 @@ function Tracks(props) {
                     <span>{track.title}</span>
                   </Link>
                   <span>{track.artist}</span>
+                  <span>{track.duration}</span>
+                  <span></span>
                 </div>
               );
             })}
