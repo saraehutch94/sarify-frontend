@@ -5,7 +5,7 @@ function Dropdown(props) {
 
   return (
     <div className="dropdown-menu">
-      <label htmlFor="genre">Select Genre:</label>
+      {/* <label htmlFor="genre">Select Genre:</label> */}
       <select name="genre" id="genre" onChange={handleChange}>
         <option select="true" value="All">
           All Genres

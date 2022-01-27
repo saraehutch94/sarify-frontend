@@ -14,6 +14,7 @@ function Tracks(props) {
   const allLoaded = () => {
     return (
       <div className="tracks-wrapper-whole">
+        <div className="playlist-title">top played</div>
         <div className="track-page-content">
           <Link to="/sarify/create">
             <button disabled={!props.user}>Contribute</button>
@@ -60,6 +61,7 @@ function Tracks(props) {
   const genreLoaded = () => {
     return (
       <div className="tracks-wrapper-whole">
+        <div className="playlist-title">top played</div>
         <div className="track-page-content">
           <Link to="/sarify/create">
             <button disabled={!props.user}>Contribute</button>
