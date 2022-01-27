@@ -128,13 +128,13 @@
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 414px) {
   .playlist-title {
-    margin: 30px 0 30px 0;
+    margin: 50px 0 40px 0;
   }
 
   .track-page-content {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     justify-content: space-between;
   }
 }
