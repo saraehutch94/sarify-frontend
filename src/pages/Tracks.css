@@ -22,7 +22,23 @@
   width: 50%;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   margin-bottom: 20px;
+}
+
+.contribute-button-user {
+  padding: 6px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contribute-button {
+  padding: 6px;
+  background-color: rgb(44, 44, 44);
+  color: white;
+  border: none;
 }
 
 .play-icon {
