@@ -11,3 +11,31 @@
   justify-content: center;
   align-items: center;
 }
+
+.create-track-title {
+  color: white;
+  font-family: "DM Serif Text", serif;
+  font-size: 40px;
+  position: relative;
+  bottom: 40px;
+}
+
+.image-and-form {
+  width: 65%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.create-coverArt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.image-file {
+  font-size: 25px;
+  font-family: "DM Serif Text", serif;
+  color: rgb(243, 47, 168);
+}
