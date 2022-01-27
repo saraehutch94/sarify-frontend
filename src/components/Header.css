@@ -1,19 +1,28 @@
 header {
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: #000000;
   position: relative;
+}
+
+.title-and-underline {
+  position: relative;
+  left: 150px;
 }
 
 .title {
   color: white;
   font-family: "DM Serif Text", serif;
   font-size: 50px;
-  padding-left: 20px;
+}
+
+.vinyl-image {
+  height: 150px;
+  width: 150px;
+  position: absolute;
 }
 
 .underline-header {
-  position: absolute;
   bottom: 8px;
   left: 20px;
   height: 2px;

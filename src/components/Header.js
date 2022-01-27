@@ -5,8 +5,15 @@ import "./Header.css";
 function Header(props) {
   return (
     <header>
-      <div className="title">sarify</div>
-      <div className="underline-header"></div>
+      <img
+        src="https://i.imgur.com/1eXt2uo.png"
+        alt="playlist-photo"
+        className="vinyl-image"
+      />
+      <div className="title-and-underline">
+        <div className="title">sarify</div>
+        <div className="underline-header"></div>
+      </div>
       <nav className="nav-icons">
         <Link to="/">
           <div className="home-icon"></div>
