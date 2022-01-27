@@ -65,7 +65,7 @@ function CreateTrack(props) {
               name="title"
               value={formState.title}
               onChange={handleChange}
-              placeholder="Title"
+              placeholder="Title (+ feature)"
               className="create-form-input"
             />
           </label>
