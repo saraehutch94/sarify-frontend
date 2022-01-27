@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -121,5 +125,11 @@ header {
   .underline-header {
     bottom: 5px;
     width: 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .title-and-underline {
+    left: 75px;
   }
 }

@@ -54,6 +54,7 @@ function CreateTrack(props) {
             background: "black",
             height: "200px",
             width: "200px",
+            borderRadius: "10%",
           }}
         >
           Cover Art will appear here
