@@ -72,10 +72,6 @@
   grid-template-columns: 1fr 3fr 2fr 1fr 1fr;
 }
 
-.ind-track:last-child {
-  border-bottom: none;
-}
-
 .ind-track:hover {
   background-color: rgb(34, 34, 34);
 }
