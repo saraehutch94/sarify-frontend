@@ -40,6 +40,7 @@ function Tracks(props) {
                       src={track.coverArt}
                       alt={track.title}
                       style={{ height: "50px", width: "50px" }}
+                      className="track-coverArt"
                     />
 
                     <div className="grid-item-title">{track.title}</div>
