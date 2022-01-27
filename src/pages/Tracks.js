@@ -70,9 +70,13 @@ function Tracks(props) {
         <div className="playlist-title">top played</div>
         <div className="track-page-content">
           <Link to="/sarify/create">
-            <button className="contribute-button" disabled={!props.user}>
-              Contribute
-            </button>
+            {!props.user ? (
+              <button className="contribute-button" disabled={!props.user}>
+                Contribute
+              </button>
+            ) : (
+              <button className="contribute-button-user">Contribute</button>
+            )}
           </Link>
           <Dropdown setGenre={setGenre} />
         </div>
