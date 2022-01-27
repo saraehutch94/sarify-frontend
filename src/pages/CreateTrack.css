@@ -41,7 +41,7 @@
 }
 
 .image-file {
-  font-size: 30px;
+  font-size: 40px;
   font-family: "DM Serif Text", serif;
   color: rgb(243, 47, 168);
 }
@@ -65,4 +65,26 @@
 .create-form-submit-disable {
   padding: 5px;
   border: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .image-and-form {
+    flex-direction: column;
+    top: 100px;
+  }
+
+  .image-file {
+    font-size: 30px;
+  }
+
+  .create-coverArt {
+    height: 300px;
+    width: 300px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .create-form {
+    margin: 0;
+  }
 }

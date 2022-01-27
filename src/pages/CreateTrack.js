@@ -131,13 +131,13 @@ function CreateTrack(props) {
             <input
               disabled={true}
               type="submit"
-              value="Add Track"
+              value="add track"
               className="create-form-submit-disable"
             />
           ) : (
             <input
               type="submit"
-              value="Add Track"
+              value="add track"
               className="create-form-submit"
             />
           )}
