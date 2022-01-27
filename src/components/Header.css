@@ -7,7 +7,7 @@ header {
 
 .title-and-underline {
   position: relative;
-  left: 150px;
+  left: 130px;
 }
 
 .title {
@@ -23,8 +23,8 @@ header {
 }
 
 .underline-header {
+  position: absolute;
   bottom: 8px;
-  left: 20px;
   height: 2px;
   width: 67px;
   background-color: #ff4e00;
@@ -101,4 +101,25 @@ header {
 .header-github-icon:hover {
   background-image: url("https://i.imgur.com/Lc9PQ1r.png");
   filter: none;
+}
+
+@media only screen and (max-width: 562px) {
+  .title-and-underline {
+    position: relative;
+    left: 90px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .vinyl-image {
+    height: 90px;
+    width: 90px;
+  }
+
+  .underline-header {
+    bottom: 5px;
+    width: 40px;
+  }
 }
