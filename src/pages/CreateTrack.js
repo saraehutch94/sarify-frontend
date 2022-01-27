@@ -41,7 +41,7 @@ function CreateTrack(props) {
           <div
             className="create-coverArt"
             style={{
-              background: `url(${formState.coverArt})`,
+              backgroundImage: `url(${formState.coverArt})`,
               backgroundSize: "cover",
             }}
           ></div>
