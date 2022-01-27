@@ -132,5 +132,6 @@
 
   .track-page-content {
     margin-bottom: 30px;
+    justify-content: space-between;
   }
 }
