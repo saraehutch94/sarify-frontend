@@ -56,6 +56,7 @@
 }
 
 .create-form-submit {
+  font-size: 15px;
   padding: 5px;
   background-color: #ff4e00;
   border: none;
@@ -63,6 +64,7 @@
 }
 
 .create-form-submit-disable {
+  font-size: 15px;
   padding: 5px;
   border: none;
 }
@@ -111,5 +113,13 @@
 
   .create-coverArt {
     margin: 0 0 20px 0;
+  }
+
+  .create-form-submit {
+    font-size: 17px;
+  }
+
+  .create-form-submit-disable {
+    font-size: 17px;
   }
 }
