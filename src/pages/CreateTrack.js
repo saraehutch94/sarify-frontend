@@ -43,8 +43,6 @@ function CreateTrack(props) {
             style={{
               background: `url(${formState.coverArt})`,
               backgroundSize: "cover",
-              height: "250px",
-              width: "250px",
             }}
           ></div>
         ) : (
@@ -53,9 +51,6 @@ function CreateTrack(props) {
             style={{
               color: "white",
               background: "black",
-              height: "250px",
-              width: "250px",
-              borderRadius: "10%",
             }}
           >
             <div className="image-file">jpg</div>
@@ -71,6 +66,7 @@ function CreateTrack(props) {
               value={formState.title}
               onChange={handleChange}
               placeholder="Title"
+              className="create-form-input"
             />
           </label>
           <br />
@@ -81,6 +77,7 @@ function CreateTrack(props) {
               value={formState.artist}
               onChange={handleChange}
               placeholder="Artist"
+              className="create-form-input"
             />
           </label>
           <br />
@@ -91,6 +88,7 @@ function CreateTrack(props) {
               value={formState.coverArt}
               onChange={handleChange}
               placeholder="Cover Art"
+              className="create-form-input"
             />
           </label>
           <br />
@@ -101,6 +99,7 @@ function CreateTrack(props) {
               value={formState.project}
               onChange={handleChange}
               placeholder="Project/Album"
+              className="create-form-input"
             />
           </label>
           <br />
@@ -111,6 +110,7 @@ function CreateTrack(props) {
               value={formState.genre}
               onChange={handleChange}
               placeholder="Genre"
+              className="create-form-input"
             />
           </label>
           <br />
@@ -121,18 +121,26 @@ function CreateTrack(props) {
               value={formState.duration}
               onChange={handleChange}
               placeholder="Duration"
+              className="create-form-input"
             />
           </label>
           <br />
-          <input
-            disabled={
-              !["jpg", "jpeg", "png"].some((files) =>
-                formState.coverArt.includes(files)
-              )
-            }
-            type="submit"
-            value="Add Track"
-          />
+          {!["jpg", "jpeg", "png"].some((files) =>
+            formState.coverArt.includes(files)
+          ) ? (
+            <input
+              disabled={true}
+              type="submit"
+              value="Add Track"
+              className="create-form-submit-disable"
+            />
+          ) : (
+            <input
+              type="submit"
+              value="Add Track"
+              className="create-form-submit"
+            />
+          )}
         </form>
       </div>
     </div>
