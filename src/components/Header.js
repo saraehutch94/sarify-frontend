@@ -1,41 +1,40 @@
 import { login, logout } from "../services/firebase";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 function Header(props) {
   return (
-    <nav>
-      <Link to="/">
-        <img
-          src="https://i.imgur.com/vBc6UJb.png"
-          alt="home-icon"
-          style={{ height: "25px", width: "25px" }}
-        />
-      </Link>
-      <Link to="/sarify/tracks">
-        <img
-          src="https://i.imgur.com/72xhKjz.png"
-          alt="tracks-icon"
-          style={{ height: "25px", width: "25px" }}
-        />
-      </Link>
-      {props.user ? (
-        <input
-          type="image"
-          src="https://i.imgur.com/NVAHAOs.png"
-          alt="logout-icon"
-          style={{ height: "25px", width: "25px" }}
-          onClick={logout}
-        />
-      ) : (
-        <input
-          type="image"
-          src="https://i.imgur.com/IIUGvUg.png"
-          alt="login-icon"
-          style={{ height: "25px", width: "25px" }}
-          onClick={login}
-        />
-      )}
-    </nav>
+    <header>
+      <img
+        src="https://i.imgur.com/1eXt2uo.png"
+        alt="playlist-photo"
+        className="vinyl-image"
+      />
+      <div className="title-and-underline">
+        <div className="title">sarify</div>
+        <div className="underline-header"></div>
+      </div>
+      <nav className="nav-icons">
+        <Link to="/">
+          <div className="home-icon"></div>
+        </Link>
+        <Link to="/sarify/tracks">
+          <div className="header-music-icon"></div>
+        </Link>
+        {props.user ? (
+          <div className="header-logout-icon" onClick={logout}></div>
+        ) : (
+          <div className="header-login-icon" onClick={login}></div>
+        )}
+        <a
+          href="https://github.com/saraehutch94/sarify-frontend"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="header-github-icon"></div>
+        </a>
+      </nav>
+    </header>
   );
 }
 

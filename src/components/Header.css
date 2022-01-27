@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  position: relative;
+}
+
+.title-and-underline {
+  position: relative;
+  left: 130px;
+}
+
+.title {
+  color: white;
+  font-family: "DM Serif Text", serif;
+  font-size: 50px;
+}
+
+.vinyl-image {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+}
+
+.underline-header {
+  position: absolute;
+  bottom: 8px;
+  height: 2px;
+  width: 67px;
+  background-color: #ff4e00;
+}
+
+.nav-icons {
+  width: 32%;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-icon {
+  height: 25px;
+  width: 25px;
+  background-image: url("https://i.imgur.com/vBc6UJb.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: brightness(0) invert(1);
+}
+
+.home-icon:hover {
+  background-image: url("https://i.imgur.com/7rEW6DU.png");
+  filter: none;
+}
+
+.header-music-icon {
+  height: 25px;
+  width: 25px;
+  background-image: url("https://i.imgur.com/72xhKjz.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: brightness(0) invert(1);
+}
+
+.header-music-icon:hover {
+  background-image: url("https://i.imgur.com/DgdkvMq.png");
+  filter: none;
+}
+
+.header-logout-icon {
+  height: 25px;
+  width: 25px;
+  background-image: url("https://i.imgur.com/NVAHAOs.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.header-login-icon {
+  height: 25px;
+  width: 25px;
+  background-image: url("https://i.imgur.com/IIUGvUg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+
+.header-login-icon:hover {
+  background-image: url("https://i.imgur.com/BlMFfs1.png");
+  filter: none;
+}
+
+.header-github-icon {
+  height: 25px;
+  width: 25px;
+  background-image: url("https://i.imgur.com/tAFIOZN.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: brightness(0) invert(1);
+}
+
+.header-github-icon:hover {
+  background-image: url("https://i.imgur.com/Lc9PQ1r.png");
+  filter: none;
+}
+
+@media only screen and (max-width: 562px) {
+  .title-and-underline {
+    position: relative;
+    left: 90px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .vinyl-image {
+    height: 90px;
+    width: 90px;
+  }
+
+  .underline-header {
+    bottom: 5px;
+    width: 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .title-and-underline {
+    left: 75px;
+  }
+}

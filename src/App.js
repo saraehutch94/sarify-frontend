@@ -15,9 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header user={user} />
       <Main user={user} />
-      <Footer />
     </div>
   );
 }

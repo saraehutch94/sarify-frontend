@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./CreateTrack.css";
 
 function CreateTrack(props) {
   const [formState, setFormState] = useState({
@@ -7,6 +8,7 @@ function CreateTrack(props) {
     coverArt: "",
     project: "",
     genre: "",
+    duration: "",
   });
 
   const handleChange = (e) => {
@@ -31,93 +33,118 @@ function CreateTrack(props) {
 
   return (
     <div className="create-track">
-      <h1>Create a Track</h1>
-      {["jpg", "jpeg", "png"].some((files) =>
-        formState.coverArt.includes(files)
-      ) ? (
-        <div
-          className="create-coverArt"
-          style={{
-            background: `url(${formState.coverArt})`,
-            backgroundSize: "cover",
-            height: "200px",
-            width: "200px",
-          }}
-        ></div>
-      ) : (
-        <div
-          className="create-coverArt"
-          style={{
-            color: "white",
-            background: "black",
-            height: "200px",
-            width: "200px",
-          }}
-        >
-          Cover Art will appear here
-        </div>
-      )}
-      <form onSubmit={handleSubmit}>
-        <label>
-          <input
-            type="text"
-            name="title"
-            value={formState.title}
-            onChange={handleChange}
-            placeholder="Title"
-          />
-        </label>
-        <br />
-        <label>
-          <input
-            type="text"
-            name="artist"
-            value={formState.artist}
-            onChange={handleChange}
-            placeholder="Artist"
-          />
-        </label>
-        <br />
-        <label>
-          <input
-            type="text"
-            name="coverArt"
-            value={formState.coverArt}
-            onChange={handleChange}
-            placeholder="Cover Art"
-          />
-        </label>
-        <br />
-        <label>
-          <input
-            type="text"
-            name="project"
-            value={formState.project}
-            onChange={handleChange}
-            placeholder="Project/Album"
-          />
-        </label>
-        <br />
-        <label>
-          <input
-            type="text"
-            name="genre"
-            value={formState.genre}
-            onChange={handleChange}
-            placeholder="Genre"
-          />
-        </label>
-        <br />
-        <input
-          disabled={
-            !["jpg", "jpeg", "png"].some((files) =>
+      <div className="create-track-title">add track</div>
+      <div className="image-and-form">
+        {["jpg", "jpeg", "png"].some((files) =>
+          formState.coverArt.includes(files)
+        ) ? (
+          <div
+            className="create-coverArt"
+            style={{
+              backgroundImage: `url(${formState.coverArt})`,
+              backgroundSize: "cover",
+            }}
+          ></div>
+        ) : (
+          <div
+            className="create-coverArt"
+            style={{
+              color: "white",
+              background: "black",
+            }}
+          >
+            <div className="image-file">jpg</div>
+            <div className="image-file">jpeg</div>
+            <div className="image-file">png</div>
+          </div>
+        )}
+        <form className="create-form" onSubmit={handleSubmit}>
+          <label>
+            <input
+              type="text"
+              name="title"
+              value={formState.title}
+              onChange={handleChange}
+              placeholder="Title (+ feature)"
+              className="create-form-input"
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              type="text"
+              name="artist"
+              value={formState.artist}
+              onChange={handleChange}
+              placeholder="Artist"
+              className="create-form-input"
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              type="text"
+              name="coverArt"
+              value={formState.coverArt}
+              onChange={handleChange}
+              placeholder="Cover Art"
+              className="create-form-input"
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              type="text"
+              name="project"
+              value={formState.project}
+              onChange={handleChange}
+              placeholder="Project/Album"
+              className="create-form-input"
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              type="text"
+              name="genre"
+              value={formState.genre}
+              onChange={handleChange}
+              placeholder="Genre"
+              className="create-form-input"
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              type="text"
+              name="duration"
+              value={formState.duration}
+              onChange={handleChange}
+              placeholder="Duration"
+              className="create-form-input"
+            />
+          </label>
+          <br />
+          <div className="create-form-submit-wrapper">
+            {!["jpg", "jpeg", "png"].some((files) =>
               formState.coverArt.includes(files)
-            )
-          }
-          type="submit"
-          value="Add Track"
-        />
-      </form>
+            ) ? (
+              <input
+                disabled={true}
+                type="submit"
+                value="add track"
+                className="create-form-submit-disable"
+              />
+            ) : (
+              <input
+                type="submit"
+                value="add track"
+                className="create-form-submit"
+              />
+            )}
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

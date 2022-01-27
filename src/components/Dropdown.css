@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+#genre {
+  color: white;
+  background-color: black;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
