@@ -35,10 +35,12 @@
   cursor: pointer;
 }
 
+.contribute-button-user:hover {
+  background-color: rgb(243, 47, 168);
+}
+
 .contribute-button {
   padding: 6px;
-  background-color: rgb(44, 44, 44);
-  color: white;
   border: none;
 }
 
@@ -75,7 +77,7 @@
 }
 
 .ind-track:hover {
-  background-color: rgb(27, 27, 27);
+  background-color: rgb(34, 34, 34);
 }
 
 .grid-item {
