@@ -1,3 +1,5 @@
+import "./Dropdown.css";
+
 function Dropdown(props) {
   const handleChange = (e) => {
     props.setGenre(e.target.value);
@@ -5,7 +7,6 @@ function Dropdown(props) {
 
   return (
     <div className="dropdown-menu">
-      {/* <label htmlFor="genre">Select Genre:</label> */}
       <select name="genre" id="genre" onChange={handleChange}>
         <option select="true" value="All">
           All Genres
