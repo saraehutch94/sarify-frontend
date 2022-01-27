@@ -125,22 +125,24 @@ function CreateTrack(props) {
             />
           </label>
           <br />
-          {!["jpg", "jpeg", "png"].some((files) =>
-            formState.coverArt.includes(files)
-          ) ? (
-            <input
-              disabled={true}
-              type="submit"
-              value="add track"
-              className="create-form-submit-disable"
-            />
-          ) : (
-            <input
-              type="submit"
-              value="add track"
-              className="create-form-submit"
-            />
-          )}
+          <div className="create-form-submit-wrapper">
+            {!["jpg", "jpeg", "png"].some((files) =>
+              formState.coverArt.includes(files)
+            ) ? (
+              <input
+                disabled={true}
+                type="submit"
+                value="add track"
+                className="create-form-submit-disable"
+              />
+            ) : (
+              <input
+                type="submit"
+                value="add track"
+                className="create-form-submit"
+              />
+            )}
+          </div>
         </form>
       </div>
     </div>

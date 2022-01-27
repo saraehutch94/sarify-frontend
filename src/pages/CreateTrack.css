@@ -90,10 +90,26 @@
   }
 
   .create-form {
-    margin-left: 0;
+    margin: 0 0 20px 0;
   }
 
   .create-form-input {
     font-size: 20px;
+  }
+
+  .create-form-submit-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .create-track-title {
+    top: 0;
+  }
+
+  .create-coverArt {
+    margin: 0 0 20px 0;
   }
 }
