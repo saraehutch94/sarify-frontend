@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./CreateTrack.css";
 
 function CreateTrack(props) {
   const [formState, setFormState] = useState({
@@ -32,7 +33,7 @@ function CreateTrack(props) {
 
   return (
     <div className="create-track">
-      <h1>Create a Track</h1>
+      <div className="create-track-title">Create a Track</div>
       {["jpg", "jpeg", "png"].some((files) =>
         formState.coverArt.includes(files)
       ) ? (
