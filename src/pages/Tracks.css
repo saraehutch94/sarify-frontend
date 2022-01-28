@@ -53,11 +53,13 @@
 
 .all-tracks {
   width: 50%;
-  height: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: auto;
+  animation-name: slidedown;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 .ind-track {
@@ -132,5 +134,15 @@
   .track-page-content {
     margin-bottom: 40px;
     justify-content: space-between;
+  }
+}
+
+@keyframes slidedown {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 550px;
   }
 }
