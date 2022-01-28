@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Track.css";
 
 function Track(props) {
   const id = props.match.params.id;
