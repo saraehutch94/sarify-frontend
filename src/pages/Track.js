@@ -98,7 +98,7 @@ function Track(props) {
         <img
           src={foundTrack.coverArt}
           alt={foundTrack.project}
-          style={{ height: "200px", width: "200px" }}
+          className="track-image"
         />
         <h2>{foundTrack.title}</h2>
         <h3>{foundTrack.artist}</h3>
