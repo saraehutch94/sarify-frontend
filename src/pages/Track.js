@@ -93,26 +93,28 @@ function Track(props) {
   };
 
   return (
-    <div className="single-track">
-      <img
-        src={foundTrack.coverArt}
-        alt={foundTrack.project}
-        style={{ height: "200px", width: "200px" }}
-      />
-      <h2>{foundTrack.title}</h2>
-      <h3>{foundTrack.artist}</h3>
-      <p>Project: {foundTrack.project}</p>
-      <p>Genre: {foundTrack.genre}</p>
-      {!props.user ? (
-        <h4>Please login to make changes to the playlist</h4>
-      ) : null}
-      <button disabled={!props.user} onClick={handleForm}>
-        Update Track
-      </button>
-      {update ? updateForm() : null}
-      <button disabled={!props.user} onClick={handleDelete}>
-        Delete Track
-      </button>
+    <div className="single-track-wrapper">
+      <div className="single-track">
+        <img
+          src={foundTrack.coverArt}
+          alt={foundTrack.project}
+          style={{ height: "200px", width: "200px" }}
+        />
+        <h2>{foundTrack.title}</h2>
+        <h3>{foundTrack.artist}</h3>
+        <p>Project: {foundTrack.project}</p>
+        <p>Genre: {foundTrack.genre}</p>
+        {!props.user ? (
+          <h4>Please login to make changes to the playlist</h4>
+        ) : null}
+        <button disabled={!props.user} onClick={handleForm}>
+          Update Track
+        </button>
+        {update ? updateForm() : null}
+        <button disabled={!props.user} onClick={handleDelete}>
+          Delete Track
+        </button>
+      </div>
     </div>
   );
 }
