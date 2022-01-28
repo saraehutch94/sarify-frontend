@@ -27,5 +27,22 @@
   width: 250px;
   border-radius: 25px;
   border: 1px solid rgb(243, 47, 168);
-  box-shadow: 12px 12px 10px rgb(243, 47, 168);
+  position: relative;
+  animation-name: slideout;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideout {
+  from {
+    top: 10px;
+    left: 10px;
+    box-shadow: none;
+  }
+
+  to {
+    top: 0;
+    left: 0;
+    box-shadow: 12px 12px 10px rgb(243, 47, 168);
+  }
 }
