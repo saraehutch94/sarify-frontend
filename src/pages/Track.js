@@ -95,11 +95,13 @@ function Track(props) {
   return (
     <div className="single-track-wrapper">
       <div className="single-track">
-        <img
-          src={foundTrack.coverArt}
-          alt={foundTrack.project}
-          className="track-image"
-        />
+        <div className="image">
+          <img
+            src={foundTrack.coverArt}
+            alt={foundTrack.project}
+            className="track-image"
+          />
+        </div>
         <div className="track-details">
           <h2 className="ind-track-title">{foundTrack.title}</h2>
           <div className="track-underline"></div>

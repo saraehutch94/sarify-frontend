@@ -16,9 +16,10 @@
 
 .single-track {
   position: absolute;
-  top: 120px;
+  top: 200px;
+  /* top: 120px; */
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
 }
 
@@ -34,12 +35,12 @@
   margin-bottom: 20px;
 }
 
-.track-details {
+/* .track-details {
   width: 250px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-}
+} */
 
 @keyframes slideout {
   from {
