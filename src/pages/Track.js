@@ -32,63 +32,65 @@ function Track(props) {
 
   const updateForm = () => {
     return (
-      <form onSubmit={handleSubmit}>
-        <label>
-          <input
-            type="text"
-            name="title"
-            value={trackForm.title}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          <input
-            type="text"
-            name="artist"
-            value={trackForm.artist}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          <input
-            type="text"
-            name="coverArt"
-            value={trackForm.coverArt}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          <input
-            type="text"
-            name="project"
-            value={trackForm.project}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          <input
-            type="text"
-            name="genre"
-            value={trackForm.genre}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          <input
-            type="text"
-            name="duration"
-            value={trackForm.duration}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <input type="submit" value="Submit Changes" />
-      </form>
+      <div className="track-details">
+        <form onSubmit={handleSubmit}>
+          <label>
+            <input
+              type="text"
+              name="title"
+              value={trackForm.title}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              type="text"
+              name="artist"
+              value={trackForm.artist}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              type="text"
+              name="coverArt"
+              value={trackForm.coverArt}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              type="text"
+              name="project"
+              value={trackForm.project}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              type="text"
+              name="genre"
+              value={trackForm.genre}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              type="text"
+              name="duration"
+              value={trackForm.duration}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <input type="submit" value="Submit Changes" />
+        </form>
+      </div>
     );
   };
 
@@ -102,19 +104,22 @@ function Track(props) {
             className="track-image"
           />
         </div>
-        <div className="track-details">
-          <h2 className="ind-track-title">{foundTrack.title}</h2>
-          <h2 className="ind-track-artist">{foundTrack.artist}</h2>
-          <p className="ind-track-project">{foundTrack.project}</p>
-          <p className="ind-track-genre">{foundTrack.genre}</p>
-          <button disabled={!props.user} onClick={handleForm}>
-            Update Track
-          </button>
-          {update ? updateForm() : null}
-          <button disabled={!props.user} onClick={handleDelete}>
-            Delete Track
-          </button>
-        </div>
+        {update ? (
+          updateForm()
+        ) : (
+          <div className="track-details">
+            <h2 className="ind-track-title">{foundTrack.title}</h2>
+            <h2 className="ind-track-artist">{foundTrack.artist}</h2>
+            <p className="ind-track-project">{foundTrack.project}</p>
+            <p className="ind-track-genre">{foundTrack.genre}</p>
+            <button disabled={!props.user} onClick={handleForm}>
+              Update Track
+            </button>
+            <button disabled={!props.user} onClick={handleDelete}>
+              Delete Track
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

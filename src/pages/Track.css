@@ -81,6 +81,12 @@
   }
 }
 
+@media only screen and (max-width: 414px) {
+  .single-track {
+    top: 200px;
+  }
+}
+
 @keyframes slideout {
   from {
     top: 10px;
