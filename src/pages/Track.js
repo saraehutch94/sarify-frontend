@@ -104,10 +104,9 @@ function Track(props) {
         </div>
         <div className="track-details">
           <h2 className="ind-track-title">{foundTrack.title}</h2>
-          <div className="track-underline"></div>
-          <h3>{foundTrack.artist}</h3>
-          <p>{foundTrack.project}</p>
-          <p>{foundTrack.genre}</p>
+          <h2 className="ind-track-artist">{foundTrack.artist}</h2>
+          <p className="ind-track-project">{foundTrack.project}</p>
+          <p className="ind-track-genre">{foundTrack.genre}</p>
           <button disabled={!props.user} onClick={handleForm}>
             Update Track
           </button>
