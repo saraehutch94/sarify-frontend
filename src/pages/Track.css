@@ -58,7 +58,7 @@
 
 @media only screen and (max-width: 620px) {
   .single-track {
-    top: 120px;
+    position: static;
     flex-direction: column;
   }
 
