@@ -100,20 +100,20 @@ function Track(props) {
           alt={foundTrack.project}
           className="track-image"
         />
-        <h2>{foundTrack.title}</h2>
-        <h3>{foundTrack.artist}</h3>
-        <p>Project: {foundTrack.project}</p>
-        <p>Genre: {foundTrack.genre}</p>
-        {!props.user ? (
-          <h4>Please login to make changes to the playlist</h4>
-        ) : null}
-        <button disabled={!props.user} onClick={handleForm}>
-          Update Track
-        </button>
-        {update ? updateForm() : null}
-        <button disabled={!props.user} onClick={handleDelete}>
-          Delete Track
-        </button>
+        <div className="track-details">
+          <h2 className="ind-track-title">{foundTrack.title}</h2>
+          <div className="track-underline"></div>
+          <h3>{foundTrack.artist}</h3>
+          <p>{foundTrack.project}</p>
+          <p>{foundTrack.genre}</p>
+          <button disabled={!props.user} onClick={handleForm}>
+            Update Track
+          </button>
+          {update ? updateForm() : null}
+          <button disabled={!props.user} onClick={handleDelete}>
+            Delete Track
+          </button>
+        </div>
       </div>
     </div>
   );

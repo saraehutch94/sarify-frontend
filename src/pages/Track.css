@@ -31,6 +31,14 @@
   animation-name: slideout;
   animation-duration: 0.75s;
   animation-fill-mode: forwards;
+  margin-bottom: 20px;
+}
+
+.track-details {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 @keyframes slideout {
