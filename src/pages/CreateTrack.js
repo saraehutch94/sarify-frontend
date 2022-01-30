@@ -110,9 +110,6 @@ function CreateTrack(props) {
               value={formState.genre}
               onChange={handleChange}
             >
-              <option selected="selected" disabled="disabled">
-                Genre
-              </option>
               <option value="Hip-Hop">Hip-Hop</option>
               <option value="R&B">R&B</option>
               <option value="Alternative">Alternative</option>

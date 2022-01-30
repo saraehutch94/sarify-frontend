@@ -45,18 +45,28 @@
   font-family: "DM Serif Text", serif;
   color: rgb(243, 47, 168);
 }
-
 .create-form-input {
   font-size: 25px;
   background-color: black;
   border: none;
   color: white;
-  margin-bottom: 10px;
   padding: 5px;
+  margin-bottom: 10px;
 }
 
 .create-dropdown {
   width: 100%;
+}
+
+.genre-dropdown {
+  font-size: 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.genre-label {
+  background-color: black;
 }
 
 .create-form-submit {
