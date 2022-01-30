@@ -1,4 +1,8 @@
 function Buttons(props) {
+  const handleForm = () => {
+    !props.update ? props.setUpdate(true) : props.setUpdate(false);
+  };
+
   const userButtons = () => {
     return (
       <div className="button-flex">
