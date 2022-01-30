@@ -7,7 +7,7 @@ function CreateTrack(props) {
     artist: "",
     coverArt: "",
     project: "",
-    genre: "",
+    genre: "Genre",
     duration: "",
   });
 
@@ -26,7 +26,7 @@ function CreateTrack(props) {
       artist: "",
       coverArt: "",
       project: "",
-      genre: "",
+      genre: "Genre",
     });
     props.history.push("/sarify/tracks");
   };
@@ -103,17 +103,22 @@ function CreateTrack(props) {
             />
           </label>
           <br />
-          <select
-            name="genre"
-            className="create-form-input create-dropdown"
-            value={formState.genre}
-            onChange={handleChange}
-          >
-            <option value="Hip-Hop">Hip-Hop</option>
-            <option value="R&B">R&B</option>
-            <option value="Alternative">Alternative</option>
-            <option value="Electronic">Electronic</option>
-          </select>
+          <label>
+            <select
+              name="genre"
+              className="create-form-input create-dropdown"
+              value={formState.genre}
+              onChange={handleChange}
+            >
+              <option selected="selected" disabled="disabled">
+                Genre
+              </option>
+              <option value="Hip-Hop">Hip-Hop</option>
+              <option value="R&B">R&B</option>
+              <option value="Alternative">Alternative</option>
+              <option value="Electronic">Electronic</option>
+            </select>
+          </label>
           <br />
           <label>
             <input
