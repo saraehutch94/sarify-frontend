@@ -83,6 +83,34 @@
   margin-bottom: 7px;
 }
 
+.update-input {
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 7px;
+}
+
+.update-submit {
+  color: white;
+  background-color: #b63600;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.update-submit:hover {
+  background-color: #ff4e00;
+}
+
+.update-submit-disable {
+  padding: 5px;
+  font-size: 15px;
+  border: none;
+}
+
 @media only screen and (max-width: 620px) {
   .single-track {
     position: static;

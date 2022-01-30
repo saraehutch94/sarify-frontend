@@ -33,13 +33,15 @@ function Track(props) {
   const updateForm = () => {
     return (
       <div className="track-details">
-        <form onSubmit={handleSubmit}>
+        <form className="update-form" onSubmit={handleSubmit}>
           <label>
             <input
               type="text"
               name="title"
               value={trackForm.title}
               onChange={handleChange}
+              disabled={!props.user}
+              className="update-input"
             />
           </label>
           <br />
@@ -49,6 +51,8 @@ function Track(props) {
               name="artist"
               value={trackForm.artist}
               onChange={handleChange}
+              disabled={!props.user}
+              className="update-input"
             />
           </label>
           <br />
@@ -58,6 +62,8 @@ function Track(props) {
               name="coverArt"
               value={trackForm.coverArt}
               onChange={handleChange}
+              disabled={!props.user}
+              className="update-input"
             />
           </label>
           <br />
@@ -67,6 +73,8 @@ function Track(props) {
               name="project"
               value={trackForm.project}
               onChange={handleChange}
+              disabled={!props.user}
+              className="update-input"
             />
           </label>
           <br />
@@ -76,6 +84,8 @@ function Track(props) {
               name="genre"
               value={trackForm.genre}
               onChange={handleChange}
+              disabled={!props.user}
+              className="update-input"
             />
           </label>
           <br />
@@ -85,10 +95,17 @@ function Track(props) {
               name="duration"
               value={trackForm.duration}
               onChange={handleChange}
+              disabled={!props.user}
+              className="update-input"
             />
           </label>
           <br />
-          <input type="submit" value="Submit Changes" />
+          <input
+            type="submit"
+            value="Submit Changes"
+            className="update-submit"
+            disabled={!props.user}
+          />
         </form>
       </div>
     );
@@ -128,16 +145,11 @@ function Track(props) {
               <div className="button-flex">
                 <button
                   className="track-button-disable update-button"
-                  onClick={handleForm}
                   disabled={!props.user}
                 >
                   Update Track
                 </button>
-                <button
-                  className="track-button-disable"
-                  onClick={handleDelete}
-                  disabled={!props.user}
-                >
+                <button className="track-button-disable" disabled={!props.user}>
                   Delete Track
                 </button>
               </div>
