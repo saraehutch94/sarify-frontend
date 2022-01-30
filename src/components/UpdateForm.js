@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function UpdateForm(props) {
   const [trackForm, setTrackForm] = useState(props.foundTrack);
+
   const handleChange = (e) => {
     setTrackForm({
       ...trackForm,
@@ -11,7 +12,7 @@ function UpdateForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.updateTrack(foundTrack, props.id);
+    props.updateTrack(trackForm, props.id);
     props.setUpdate(false);
   };
 
