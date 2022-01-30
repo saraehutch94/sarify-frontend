@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.single-track-wrapper {
+  height: 100vh;
+  background-color: rgb(31, 28, 37);
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-track {
+  position: absolute;
+  top: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.track-image {
+  height: 300px;
+  width: 300px;
+  border-radius: 25px;
+  border: 1px solid rgb(243, 47, 168);
+  position: relative;
+  animation-name: slideout;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  margin-right: 15px;
+}
+
+.track-details {
+  width: 244px;
+  margin-left: 15px;
+}
+
+.ind-track-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.ind-track-artist {
+  margin-bottom: 10px;
+}
+
+.ind-track-project {
+  margin-bottom: 10px;
+}
+
+.ind-track-genre {
+  margin-bottom: 10px;
+}
+
+.button-flex {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.track-button-user {
+  padding: 5px;
+  background-color: #b63600;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.track-button-disable {
+  padding: 5px;
+  border: none;
+}
+
+.track-button-user:hover {
+  background-color: #ff4e00;
+}
+
+.update-button {
+  margin-bottom: 7px;
+}
+
+.update-input {
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 7px;
+}
+
+.update-submit {
+  color: white;
+  background-color: #b63600;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.update-submit:hover {
+  background-color: #ff4e00;
+}
+
+.update-submit-disable {
+  padding: 5px;
+  font-size: 15px;
+  border: none;
+}
+
+@media only screen and (max-width: 620px) {
+  .single-track {
+    position: static;
+    flex-direction: column;
+  }
+
+  .track-image {
+    margin-bottom: 20px;
+  }
+
+  .track-details {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 20px;
+  }
+
+  .ind-track-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .button-flex {
+    width: 31%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    top: 10px;
+    left: 10px;
+    box-shadow: none;
+  }
+
+  to {
+    top: 0;
+    left: 0;
+    box-shadow: 12px 12px 10px rgb(243, 47, 168);
+  }
+}

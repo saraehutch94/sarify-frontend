@@ -58,9 +58,14 @@
 .create-form-submit {
   font-size: 15px;
   padding: 5px;
-  background-color: #ff4e00;
+  background-color: #b63600;
   border: none;
   color: white;
+  cursor: pointer;
+}
+
+.create-form-submit:hover {
+  background-color: #ff4e00;
 }
 
 .create-form-submit-disable {
