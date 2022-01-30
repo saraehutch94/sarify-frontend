@@ -3,6 +3,11 @@ function Buttons(props) {
     !props.update ? props.setUpdate(true) : props.setUpdate(false);
   };
 
+  const handleDelete = () => {
+    props.deleteTrack(props.id);
+    props.history.push("/sarify/tracks");
+  };
+
   const userButtons = () => {
     return (
       <div className="button-flex">

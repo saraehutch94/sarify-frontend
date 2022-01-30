@@ -38,6 +38,8 @@ function Track(props) {
               update={update}
               setUpdate={setUpdate}
               deleteTrack={props.deleteTrack}
+              id={id}
+              history={props.history}
             />
             {/* {props.user ? (
               <div className="button-flex">
