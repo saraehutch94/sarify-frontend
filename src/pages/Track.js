@@ -9,11 +9,6 @@ function Track(props) {
 
   const [update, setUpdate] = useState(false);
 
-  const handleDelete = () => {
-    props.deleteTrack(id);
-    props.history.push("/sarify/tracks");
-  };
-
   return (
     <div className="single-track-wrapper">
       <div className="single-track">
@@ -38,7 +33,12 @@ function Track(props) {
             <h2 className="ind-track-artist">{foundTrack.artist}</h2>
             <p className="ind-track-project">{foundTrack.project}</p>
             <p className="ind-track-genre">{foundTrack.genre}</p>
-            <Buttons user={props.user} update={update} setUpdate={setUpdate} />
+            <Buttons
+              user={props.user}
+              update={update}
+              setUpdate={setUpdate}
+              deleteTrack={props.deleteTrack}
+            />
             {/* {props.user ? (
               <div className="button-flex">
                 <button
