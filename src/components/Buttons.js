@@ -34,6 +34,7 @@ function Buttons(props) {
       </div>
     );
   };
+  return props.user ? userButtons() : disabledButtons();
 }
 
 export default Buttons;
