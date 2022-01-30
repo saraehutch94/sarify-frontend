@@ -59,6 +59,18 @@
   width: 100%;
 }
 
+.duration-flex {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.duration-label {
+  font-size: 25px;
+  padding-left: 10px;
+}
+
 .genre-dropdown {
   font-size: 25px;
   color: white;

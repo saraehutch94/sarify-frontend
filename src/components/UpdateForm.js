@@ -150,14 +150,6 @@ function UpdateForm(props) {
               trackGenre={trackForm.genre}
               handleChange={handleChange}
             />
-            {/* <input
-              type="text"
-              name="genre"
-              value={trackForm.genre}
-              onChange={handleChange}
-              disabled={!props.user}
-              className="update-input-disable"
-            /> */}
           </label>
           <br />
           <label>
