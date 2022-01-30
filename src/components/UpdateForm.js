@@ -177,6 +177,7 @@ function UpdateForm(props) {
       </div>
     );
   };
+  return props.user ? updateFormUser() : updateFormDisable();
 }
 
 export default UpdateForm;
