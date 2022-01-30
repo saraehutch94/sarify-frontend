@@ -1,8 +1,7 @@
 .track-details {
-  width: 300px;
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .update-input {
