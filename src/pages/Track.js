@@ -42,7 +42,11 @@ function Track(props) {
           />
         </div>
         {update ? (
-          <UpdateForm />
+          <UpdateForm
+            user={props.user}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+          />
         ) : (
           <div className="track-details">
             <h2 className="ind-track-title">{foundTrack.title}</h2>
