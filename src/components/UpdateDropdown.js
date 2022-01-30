@@ -1,6 +1,11 @@
 function UpdateDropdown(props) {
   return (
-    <select name="genre" value={props.trackGenre} onChange={props.handleChange}>
+    <select
+      className="update-input update-dropdown"
+      name="genre"
+      value={props.trackGenre}
+      onChange={props.handleChange}
+    >
       <option value="Hip-Hop">Hip-Hop</option>
       <option value="R&B">R&B</option>
       <option value="Alternative">Alternative</option>

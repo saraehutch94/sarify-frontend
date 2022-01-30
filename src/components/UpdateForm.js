@@ -72,14 +72,6 @@ function UpdateForm(props) {
               trackGenre={trackForm.genre}
               handleChange={handleChange}
             />
-            {/* <input
-              type="text"
-              name="genre"
-              value={trackForm.genre}
-              onChange={handleChange}
-              disabled={!props.user}
-              className="update-input"
-            /> */}
           </label>
           <br />
           <label>
@@ -153,14 +145,19 @@ function UpdateForm(props) {
           </label>
           <br />
           <label>
-            <input
+            <UpdateDropdown
+              disabled={!props.user}
+              trackGenre={trackForm.genre}
+              handleChange={handleChange}
+            />
+            {/* <input
               type="text"
               name="genre"
               value={trackForm.genre}
               onChange={handleChange}
               disabled={!props.user}
               className="update-input-disable"
-            />
+            /> */}
           </label>
           <br />
           <label>

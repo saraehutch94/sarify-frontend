@@ -13,6 +13,10 @@
   margin-bottom: 7px;
 }
 
+.update-dropdown {
+  width: 100%;
+}
+
 .update-input-disable {
   font-size: 15px;
   border: none;
