@@ -62,6 +62,10 @@
   width: 40%;
 }
 
+.update-button {
+  margin-bottom: 7px;
+}
+
 .track-button-user {
   padding: 5px;
   background-color: #b63600;
