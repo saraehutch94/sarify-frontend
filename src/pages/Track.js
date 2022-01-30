@@ -9,13 +9,6 @@ function Track(props) {
   const [trackForm, setTrackForm] = useState(foundTrack);
   const [update, setUpdate] = useState(false);
 
-  const handleChange = (e) => {
-    setTrackForm({
-      ...trackForm,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     props.updateTrack(trackForm, id);

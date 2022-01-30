@@ -1,4 +1,11 @@
 function UpdateForm(props) {
+  const handleChange = (e) => {
+    props.setTrackForm({
+      ...props.trackForm,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const updateFormUser = () => {
     return (
       <div className="track-details">
