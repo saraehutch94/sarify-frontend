@@ -2,6 +2,7 @@ import "./Dropdown.css";
 
 function Dropdown(props) {
   const handleChange = (e) => {
+    // when dropdown menu (below) value changes, set props.setGenre to that value
     props.setGenre(e.target.value);
   };
 

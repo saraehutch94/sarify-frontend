@@ -4,10 +4,14 @@ import { Link } from "react-router-dom";
 import "./Tracks.css";
 
 function Tracks(props) {
+  // set initial trackState to string "All" (all genres)
   const [trackState, setTracks] = useState("All");
+
+  // shorthand variable for props.trackss
   const tracks = props.tracks;
 
   const setGenre = (genre) => {
+    // set setTracks to selected genre
     setTracks(genre);
   };
 
@@ -17,6 +21,8 @@ function Tracks(props) {
         <div className="playlist-title">top played</div>
         <div className="track-page-content">
           <Link to="/sarify/create">
+            {/* if no user is present, disable contribute button
+            otherwise, show contribute button */}
             {!props.user ? (
               <button className="contribute-button" disabled={!props.user}>
                 Contribute
@@ -28,6 +34,8 @@ function Tracks(props) {
           <Dropdown setGenre={setGenre} />
         </div>
         <div className="all-tracks">
+          {/* map through tracks data and render each individual track
+          using id as special key for each track */}
           {tracks.map((track) => {
             return (
               <div key={track._id} className="ind-track">
@@ -71,6 +79,8 @@ function Tracks(props) {
         <div className="playlist-title">top played</div>
         <div className="track-page-content">
           <Link to="/sarify/create">
+            {/* if no user is present, disable contribute button
+            otherwise, show contribute button */}
             {!props.user ? (
               <button className="contribute-button" disabled={!props.user}>
                 Contribute
@@ -82,6 +92,9 @@ function Tracks(props) {
           <Dropdown setGenre={setGenre} />
         </div>
         <div className="all-tracks">
+          {/* filter through tracks data and grab specific tracks based on
+         which genre was chosen in dropdown menu (trackState), map through results and
+        render each individual track using id as special key for each track */}
           {tracks
             .filter((t) => t.genre === trackState)
             .map((filteredTrack) => (
@@ -117,13 +130,17 @@ function Tracks(props) {
   };
 
   const loading = () => {
+    // data is still being grabbed from database
     return <h1>Curating...</h1>;
   };
 
   const determineLoad = () => {
+    // if trackState (dropdown selection) is "All", show all genres
+    // otherwise, show tracks that have specific genre
     return trackState === "All" ? allLoaded() : genreLoaded();
   };
-
+  // if data is still being grabbed from database, show loading()
+  // otherwise, show determineLoad();
   return <div>{props.tracks ? determineLoad() : loading()}</div>;
 }
 

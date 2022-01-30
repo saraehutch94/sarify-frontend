@@ -7,8 +7,10 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Main(props) {
+  // set initial tracks state to empty array
   const [tracks, setTracks] = useState([]);
 
+  // Heroku API URL for requests
   const URL = "https://sarify-backend.herokuapp.com/sarify/tracks/";
 
   // index/all tracks

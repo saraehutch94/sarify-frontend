@@ -21,6 +21,8 @@ function Header(props) {
         <Link to="/sarify/tracks">
           <div className="header-music-icon"></div>
         </Link>
+        {/* if there is a user present, show logout icon with logout function
+        otherwise, show login icon with login function */}
         {props.user ? (
           <div className="header-logout-icon" onClick={logout}></div>
         ) : (

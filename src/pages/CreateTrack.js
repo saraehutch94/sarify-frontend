@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./CreateTrack.css";
 
 function CreateTrack(props) {
+  // set formState initial state to track properties w/ empty values
+  // besides Genre string for dropdown menu value
   const [formState, setFormState] = useState({
     title: "",
     artist: "",
@@ -12,6 +14,8 @@ function CreateTrack(props) {
   });
 
   const handleChange = (e) => {
+    // when form changes, set setFormState to initial formState
+    // plus specific input's name as property and input's value as object property value
     setFormState({
       ...formState,
       [e.target.name]: e.target.value,
@@ -19,8 +23,12 @@ function CreateTrack(props) {
   };
 
   const handleSubmit = (e) => {
+    // prevent form submission from refreshing browser
     e.preventDefault();
+    // set props.createTrack to formState state
     props.createTrack(formState);
+    // re-set formState to empty strings
+    // besides Genre string for dropdown menu value
     setFormState({
       title: "",
       artist: "",
@@ -28,6 +36,7 @@ function CreateTrack(props) {
       project: "",
       genre: "Genre",
     });
+    // redirect back to Tracks page component
     props.history.push("/sarify/tracks");
   };
 
@@ -35,6 +44,9 @@ function CreateTrack(props) {
     <div className="create-track">
       <div className="create-track-title">add track</div>
       <div className="image-and-form">
+        {/* below: if formState coverArt property includes "jpg", "jpeg", or "png"
+        show image in create-coverArt div
+        otherwise, don't show image in create-coverArt div */}
         {["jpg", "jpeg", "png"].some((files) =>
           formState.coverArt.includes(files)
         ) ? (
@@ -129,6 +141,9 @@ function CreateTrack(props) {
           </label>
           <br />
           <div className="create-form-submit-wrapper">
+            {/* if formState coverArt property includes "jpg", "jpeg", or "png"
+        allow visitor to submit track
+        otherwise, disable form submission button */}
             {!["jpg", "jpeg", "png"].some((files) =>
               formState.coverArt.includes(files)
             ) ? (

@@ -4,9 +4,13 @@ import Buttons from "../components/Buttons";
 import "./Track.css";
 
 function Track(props) {
+  // grab id of individual track
   const id = props.match.params.id;
+
+  // find individual track within tracks data using id of track
   const foundTrack = props.tracks.find((track) => track._id === id);
 
+  // set initial state of update to falsy value (update form not shown)
   const [update, setUpdate] = useState(false);
 
   return (
@@ -19,6 +23,8 @@ function Track(props) {
             className="track-image"
           />
         </div>
+        {/* if update is a truthy value, render UpdateForm component
+        otherwise, just show track details with Buttons component for updating and deleting */}
         {update ? (
           <UpdateForm
             user={props.user}

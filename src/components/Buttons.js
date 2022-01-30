@@ -2,11 +2,14 @@ import "./Buttons.css";
 
 function Buttons(props) {
   const handleForm = () => {
+    // toggle between truthy and falsy values
     !props.update ? props.setUpdate(true) : props.setUpdate(false);
   };
 
   const handleDelete = () => {
+    // call props.deleteTrack when delete button is clicked
     props.deleteTrack(props.id);
+    // redirect to Tracks page component
     props.history.push("/sarify/tracks");
   };
 
@@ -41,6 +44,8 @@ function Buttons(props) {
       </div>
     );
   };
+  //   if there is a user present, show userButtons();
+  //   otherwise, show disabledButtons();
   return props.user ? userButtons() : disabledButtons();
 }
 

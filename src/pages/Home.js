@@ -12,6 +12,8 @@ function Home(props) {
           <Link to="/sarify/tracks">
             <div className="music-icon"></div>
           </Link>
+          {/* if user is present, show logout icon with logout function
+          otherwise, show login icon with login function */}
           {props.user ? (
             <div className="google-logout-icon" onClick={logout}></div>
           ) : (

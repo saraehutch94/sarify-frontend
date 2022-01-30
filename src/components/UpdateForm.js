@@ -3,9 +3,12 @@ import UpdateDropdown from "./UpdateDropdown";
 import "./UpdateForm.css";
 
 function UpdateForm(props) {
+  // set initial track state to props.foundTrack
   const [trackForm, setTrackForm] = useState(props.foundTrack);
 
   const handleChange = (e) => {
+    // when form value is changed, set setTrackForm to initial trackForm
+    // plus specific input's name as property and input's value as object property value
     setTrackForm({
       ...trackForm,
       [e.target.name]: e.target.value,
@@ -13,8 +16,11 @@ function UpdateForm(props) {
   };
 
   const handleSubmit = (e) => {
+    // prevent form submission from refreshing browser
     e.preventDefault();
+    // set props.updateTrack using trackForm state and track's id
     props.updateTrack(trackForm, props.id);
+    // set props.setUpdate back to original falsy value
     props.setUpdate(false);
   };
 
@@ -174,6 +180,8 @@ function UpdateForm(props) {
       </div>
     );
   };
+  // if there is a user present, show updateFormUser();
+  // otherwise, show updateFormDisable();
   return props.user ? updateFormUser() : updateFormDisable();
 }
 
