@@ -39,6 +39,7 @@ function Track(props) {
             user={props.user}
             trackForm={trackForm}
             setTrackForm={setTrackForm}
+            updateTrack={props.updateTrack}
           />
         ) : (
           <div className="track-details">
