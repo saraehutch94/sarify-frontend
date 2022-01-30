@@ -55,6 +55,10 @@
   padding: 5px;
 }
 
+.create-dropdown {
+  width: 100%;
+}
+
 .create-form-submit {
   font-size: 15px;
   padding: 5px;

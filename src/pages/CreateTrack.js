@@ -105,7 +105,7 @@ function CreateTrack(props) {
           <br />
           <select
             name="genre"
-            className="create-form-input"
+            className="create-form-input create-dropdown"
             value={formState.genre}
             onChange={handleChange}
           >
