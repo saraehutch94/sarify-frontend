@@ -37,6 +37,7 @@
 
 .contribute-button-user:hover {
   background-color: rgb(243, 47, 168);
+  border: none;
 }
 
 .contribute-button {
