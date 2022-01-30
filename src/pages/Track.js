@@ -44,8 +44,8 @@ function Track(props) {
         {update ? (
           <UpdateForm
             user={props.user}
-            handleChange={handleChange}
-            handleSubmit={handleSubmit}
+            trackForm={trackForm}
+            setTrackForm={setTrackForm}
           />
         ) : (
           <div className="track-details">
