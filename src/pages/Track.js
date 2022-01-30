@@ -42,7 +42,7 @@ function Track(props) {
           />
         </div>
         {update ? (
-          updateForm()
+          <UpdateForm />
         ) : (
           <div className="track-details">
             <h2 className="ind-track-title">{foundTrack.title}</h2>
