@@ -5,8 +5,6 @@ import "./UpdateForm.css";
 function UpdateForm(props) {
   const [trackForm, setTrackForm] = useState(props.foundTrack);
 
-  console.log(trackForm);
-
   const handleChange = (e) => {
     setTrackForm({
       ...trackForm,
