@@ -106,6 +106,10 @@
   .button-flex {
     width: 31%;
   }
+
+  .update-button {
+    margin-bottom: 7px;
+  }
 }
 
 @keyframes slideout {
