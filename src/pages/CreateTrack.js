@@ -103,16 +103,6 @@ function CreateTrack(props) {
             />
           </label>
           <br />
-          {/* <label>
-            <input
-              type="text"
-              name="genre"
-              value={formState.genre}
-              onChange={handleChange}
-              placeholder="Genre"
-              className="create-form-input"
-            />
-          </label> */}
           <select
             name="genre"
             className="create-form-input"
