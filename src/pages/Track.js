@@ -1,5 +1,6 @@
 import { useState } from "react";
 import UpdateForm from "../components/UpdateForm";
+import Buttons from "../components/Buttons";
 import "./Track.css";
 
 function Track(props) {
@@ -11,10 +12,6 @@ function Track(props) {
   const handleDelete = () => {
     props.deleteTrack(id);
     props.history.push("/sarify/tracks");
-  };
-
-  const handleForm = () => {
-    !update ? setUpdate(true) : setUpdate(false);
   };
 
   return (
@@ -41,7 +38,8 @@ function Track(props) {
             <h2 className="ind-track-artist">{foundTrack.artist}</h2>
             <p className="ind-track-project">{foundTrack.project}</p>
             <p className="ind-track-genre">{foundTrack.genre}</p>
-            {props.user ? (
+            <Buttons user={props.user} update={update} setUpdate={setUpdate} />
+            {/* {props.user ? (
               <div className="button-flex">
                 <button
                   className="track-button-user update-button"
@@ -65,7 +63,7 @@ function Track(props) {
                   Delete Track
                 </button>
               </div>
-            )}
+            )} */}
           </div>
         )}
       </div>
