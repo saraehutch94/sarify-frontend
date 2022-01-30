@@ -5,6 +5,8 @@ import "./UpdateForm.css";
 function UpdateForm(props) {
   const [trackForm, setTrackForm] = useState(props.foundTrack);
 
+  console.log(trackForm);
+
   const handleChange = (e) => {
     setTrackForm({
       ...trackForm,
@@ -67,14 +69,19 @@ function UpdateForm(props) {
           </label>
           <br />
           <label>
-            <input
+            <UpdateDropdown
+              disabled={!props.user}
+              trackGenre={trackForm.genre}
+              handleChange={handleChange}
+            />
+            {/* <input
               type="text"
               name="genre"
               value={trackForm.genre}
               onChange={handleChange}
               disabled={!props.user}
               className="update-input"
-            />
+            /> */}
           </label>
           <br />
           <label>
