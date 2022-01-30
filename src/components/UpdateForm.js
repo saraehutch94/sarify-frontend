@@ -174,6 +174,7 @@ function UpdateForm(props) {
             className="update-submit-disable"
             disabled={!props.user}
           />
+          <div className="please-login">login to make changes</div>
         </form>
       </div>
     );
