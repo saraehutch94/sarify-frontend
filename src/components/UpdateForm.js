@@ -1,9 +1,18 @@
+import { useState } from "react";
+
 function UpdateForm(props) {
+  const [trackForm, setTrackForm] = useState(props.foundTrack);
   const handleChange = (e) => {
-    props.setTrackForm({
-      ...props.trackForm,
+    setTrackForm({
+      ...trackForm,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.updateTrack(foundTrack, props.id);
+    props.setUpdate(false);
   };
 
   const updateFormUser = () => {

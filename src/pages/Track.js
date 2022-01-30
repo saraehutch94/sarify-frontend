@@ -6,14 +6,7 @@ function Track(props) {
   const id = props.match.params.id;
   const foundTrack = props.tracks.find((track) => track._id === id);
 
-  const [trackForm, setTrackForm] = useState(foundTrack);
   const [update, setUpdate] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    props.updateTrack(trackForm, id);
-    setUpdate(false);
-  };
 
   const handleDelete = () => {
     props.deleteTrack(id);
@@ -37,9 +30,10 @@ function Track(props) {
         {update ? (
           <UpdateForm
             user={props.user}
-            trackForm={trackForm}
-            setTrackForm={setTrackForm}
+            id={id}
+            foundTrack={foundTrack}
             updateTrack={props.updateTrack}
+            setUpdate={setUpdate}
           />
         ) : (
           <div className="track-details">
