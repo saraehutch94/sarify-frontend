@@ -103,7 +103,7 @@ function CreateTrack(props) {
             />
           </label>
           <br />
-          <label>
+          {/* <label>
             <input
               type="text"
               name="genre"
@@ -112,7 +112,18 @@ function CreateTrack(props) {
               placeholder="Genre"
               className="create-form-input"
             />
-          </label>
+          </label> */}
+          <select
+            name="genre"
+            className="create-form-input"
+            value={formState.genre}
+            onChange={handleChange}
+          >
+            <option value="Hip-Hop">Hip-Hop</option>
+            <option value="R&B">R&B</option>
+            <option value="Alternative">Alternative</option>
+            <option value="Electronic">Electronic</option>
+          </select>
           <br />
           <label>
             <input
