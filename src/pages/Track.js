@@ -112,22 +112,36 @@ function Track(props) {
             <h2 className="ind-track-artist">{foundTrack.artist}</h2>
             <p className="ind-track-project">{foundTrack.project}</p>
             <p className="ind-track-genre">{foundTrack.genre}</p>
-            <div className="button-flex">
-              <button
-                className="track-button-user update-button"
-                disabled={!props.user}
-                onClick={handleForm}
-              >
-                Update Track
-              </button>
-              <button
-                className="track-button-user"
-                disabled={!props.user}
-                onClick={handleDelete}
-              >
-                Delete Track
-              </button>
-            </div>
+            {props.user ? (
+              <div className="button-flex">
+                <button
+                  className="track-button-user update-button"
+                  onClick={handleForm}
+                >
+                  Update Track
+                </button>
+                <button className="track-button-user" onClick={handleDelete}>
+                  Delete Track
+                </button>
+              </div>
+            ) : (
+              <div className="button-flex">
+                <button
+                  className="track-button-disable update-button"
+                  onClick={handleForm}
+                  disabled={!props.user}
+                >
+                  Update Track
+                </button>
+                <button
+                  className="track-button-disable"
+                  onClick={handleDelete}
+                  disabled={!props.user}
+                >
+                  Delete Track
+                </button>
+              </div>
+            )}
           </div>
         )}
       </div>
