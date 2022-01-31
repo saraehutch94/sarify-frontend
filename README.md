@@ -1,6 +1,6 @@
 # Sarify | MERN-stack application
 
-**Introduction**
+## **Introduction**
 
 **Sarify** is a MERN-stack application, with data sourced from the Sarify Heroku API. This application is a music streaming application, currently with no music for the purpose of royalties and legalities. A dream of mine is to create my own music streaming service one day. The data rendered in this MERN-stack application, plus the look and feel, is a representation of that dream, minus the music (soon to come).
 You are able to view all the tracks within the "Top Played" playlist of Sarify. You can also view tracks by genre.
@@ -13,7 +13,7 @@ This application's data is protected by guests of the website that are not logge
 
 ---
 
-**Screenshots**
+## **Screenshots**
 
 Home Page
 
@@ -34,3 +34,15 @@ Update Track Form (within Individual Track Page
 Create Track Page
 
 ![Create Track Page](https://i.imgur.com/7NonNjf.png)
+
+---
+
+## **Technologies Used**
+
+- MERN
+  - Mongoose + mongoDB
+  - Express
+  - React
+  - Node.js
+- Google Firebase
+- Google Fonts
