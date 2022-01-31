@@ -5,7 +5,7 @@
 **Sarify** is a MERN-stack application, with data sourced from the Sarify Heroku API. This application is a music streaming application, currently with no music for the purpose of royalties and legalities. A dream of mine is to create my own music streaming service one day. The data rendered in this MERN-stack application, plus the look and feel, is a representation of that dream, minus the music (soon to come).
 You are able to view all the tracks within the "Top Played" playlist of Sarify. You can also view tracks by genre.
 
-This application's data is protected by guests of the website that are not logged in users. If you are a logged in user, you are able to:
+This application's data is protected by guests of the website that are not logged in users. The ability to log in and log out is provided by Google Firebase. You can log in to Sarify using your GMail account. If you are a logged in user, you are able to:
 
 - Add to the "Top Played" playlist
 - Update a track currently within the playlist
