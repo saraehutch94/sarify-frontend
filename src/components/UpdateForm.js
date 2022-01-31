@@ -75,6 +75,7 @@ function UpdateForm(props) {
           <label>
             <UpdateDropdown
               disabled={!props.user}
+              user={props.user}
               trackGenre={trackForm.genre}
               handleChange={handleChange}
             />
@@ -153,6 +154,7 @@ function UpdateForm(props) {
           <label>
             <UpdateDropdown
               disabled={!props.user}
+              user={props.user}
               trackGenre={trackForm.genre}
               handleChange={handleChange}
             />
