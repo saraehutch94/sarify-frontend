@@ -46,3 +46,32 @@ Create Track Page
   - Node.js
 - Google Firebase
 - Google Fonts
+
+---
+
+## **Getting Started**
+
+[Project Planning](https://trello.com/b/zxs6WSWI/sarify) (Trello)
+
+[Netlify Deployment](https://sarify.netlify.app)
+
+**Backend / Other links:**
+
+[GitHub Backend](https://github.com/saraehutch94/sarify-backend)
+
+[Heroku-deployed API](https://sarify-backend.herokuapp.com/sarify/tracks/)
+
+---
+
+## **Unsolved Problems**
+
+N/A
+
+---
+
+## **Future Enhancements**
+
+- Connect Firebase to the backend
+  - View tracks only a specific user has added via their personal dashboard
+- Make navigation bar into a hamburger menu with dropdown nav (whole app or just mobile)
+- If a user is not logged in, they can hear a snippet of te tracks. If user is logged in, they can play the tracks in full in the playlist and from other playlists
